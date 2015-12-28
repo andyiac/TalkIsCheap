@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TalkIsCheap</string>
+    <string name="action_settings">Settings</string>
+    <string name="dialog_title_system_msg">系统消息</string>
+</resources>
