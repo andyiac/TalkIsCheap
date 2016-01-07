@@ -1,9 +1,11 @@
-package com.andyiac.talkischeap;
+package com.andyiac.talkischeap.interact_js;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
+
+import com.andyiac.talkischeap.R;
 
 /**
  * @author andyiac

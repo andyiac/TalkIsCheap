@@ -6,7 +6,7 @@
  * Copyright: Copyright (c) 2013
  */
 
-package com.andyiac.talkischeap;
+package com.andyiac.talkischeap.interact_js;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -18,14 +18,14 @@ import android.telephony.TelephonyManager;
 import android.webkit.WebView;
 import android.widget.Toast;
 
+import com.andyiac.talkischeap.R;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import cn.pedant.SafeWebViewBridge.JsCallback;
 
 //HostJsScope中需要被JS调用的函数，必须定义成public static，且必须包含WebView这个参数
 public class HostJsScope {

@@ -18,6 +18,9 @@ android {
         }
     }
 }
+repositories {
+    // ...
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -25,5 +28,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     compile 'cn.pedant.safewebviewbridge:library:1.4'
-
+    compile 'com.orhanobut:logger:1.11'
 }

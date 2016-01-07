@@ -1,9 +1,12 @@
-package com.andyiac.talkischeap;
+package com.andyiac.talkischeap.interact_js;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+
+import com.andyiac.talkischeap.R;
+import com.andyiac.talkischeap.interact_js.HostJsScope;
 
 import cn.pedant.SafeWebViewBridge.InjectedChromeClient;
 

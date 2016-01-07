@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.andyiac.talkischeap">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:name=".ClientApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,8 +21,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SecondActivity" />
-        <activity android:name=".WebViewJsInteractActivity" />
+        <activity android:name=".interact_js.SecondActivity" />
+        <activity android:name=".interact_js.WebViewJsInteractActivity" />
+        <activity android:name=".interceptor_html.AndroidInterceptorHtmlActivity" />
+        <activity android:name=".interceptor_html.ShowWebImageActivity"/>
     </application>
 
 </manifest>
