@@ -52,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickGetPackageInfo(View view){
+        Toast.makeText(this,getPackageName(),Toast.LENGTH_SHORT).show();
+    }
+
 
     //===========================================================================
     @Override
