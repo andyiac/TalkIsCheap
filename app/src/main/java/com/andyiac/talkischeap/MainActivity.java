@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.andyiac.talkischeap.activitys.OverScrollActivity;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
 import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
 
@@ -52,10 +53,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClickGetPackageInfo(View view){
-        Toast.makeText(this,getPackageName(),Toast.LENGTH_SHORT).show();
+    public void onClickGetPackageInfo(View view) {
+        Toast.makeText(this, getPackageName(), Toast.LENGTH_SHORT).show();
     }
 
+    public void onClickOverScrollActivity(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, OverScrollActivity.class);
+        startActivity(intent);
+
+    }
 
     //===========================================================================
     @Override

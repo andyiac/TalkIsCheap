@@ -38,4 +38,6 @@ dependencies {
     compile rootProject.ext.dependencies["okhttp-urlconnection"]
     compile rootProject.ext.dependencies["universal-image-loader"]
 
+
+
 }

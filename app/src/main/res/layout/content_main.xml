@@ -47,6 +47,13 @@
                 android:onClick="onClickGetPackageInfo"
                 android:text="onClick get package info" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickOverScrollActivity"
+                android:text="test over scroll view" />
+
+
         </LinearLayout>
 
     </ScrollView>
