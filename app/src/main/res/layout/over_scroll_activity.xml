@@ -8,8 +8,7 @@
     <com.andyiac.talkischeap.view.scroll.OverScrollView
         android:id="@+id/over_scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,12 +24,12 @@
                 android:padding="10dp"
                 android:text="asdfasdf" />
 
-            <ListView
+            <com.andyiac.talkischeap.view.scroll.ListViewForScrollView
                 android:id="@+id/id_lv_over_scroll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            </ListView>
+            </com.andyiac.talkischeap.view.scroll.ListViewForScrollView>
 
         </LinearLayout>
     </com.andyiac.talkischeap.view.scroll.OverScrollView>

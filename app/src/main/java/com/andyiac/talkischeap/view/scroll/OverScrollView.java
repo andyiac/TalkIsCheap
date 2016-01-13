@@ -9,6 +9,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ScrollView;
 
+import com.orhanobut.logger.Logger;
+
 
 /**
  * 具有上下弹性滚动的ScrollView<br><br>
@@ -157,6 +159,9 @@ public class OverScrollView extends ScrollView {
         }
     }
 
+
+
+
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         // 如果禁用，不做任何处理
@@ -187,9 +192,8 @@ public class OverScrollView extends ScrollView {
     }
 
 
-
-
     private float mLastY = -1; // save event y
+
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         if (mLastY == -1) {
@@ -241,7 +245,7 @@ public class OverScrollView extends ScrollView {
                     final float y = ev.getY(activePointerIndex);
                     // 滚动距离
                     int deltaY = (int) (mLastMotionY - y);
-                    Log.i("overscrollview",""+deltaY);
+                    Log.i("overscrollview", "" + deltaY);
                     // 记录新的触摸位置
                     mLastMotionY = y;
 
