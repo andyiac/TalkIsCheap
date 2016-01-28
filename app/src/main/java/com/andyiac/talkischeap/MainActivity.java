@@ -2,8 +2,6 @@ package com.andyiac.talkischeap;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -16,6 +14,15 @@ import com.andyiac.talkischeap.activitys.PopWindowTestActivity;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
 import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
 
+/**
+ * 本工程致力实现各种各样的demo 和解决各种bug
+ * 开发过程中尽量不使用第三方类库实现
+ * 问题列表可以在一下找到
+ * http://www.andyiac.com/stone/problemandroid/
+ * 看来我应该给每个问题编号这样以后查阅起来才更方便
+ *
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,20 +31,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-    }
-
-
-    public void onClickTest(View view) {
-        Toast.makeText(this, "onTest", Toast.LENGTH_SHORT).show();
     }
 
     public void onClickWebViewJsInteracts(View view) {
-
         Intent intent = new Intent();
         intent.setClass(this, WebViewJsInteractActivity.class);
         startActivity(intent);
-
     }
 
     public void onClickAndroidInterceptorHtmlActivity(View view) {
@@ -57,18 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-
-
-    public void onClickPopWindow(View view){
+    public void onClickPopWindow(View view) {
         Intent intent = new Intent();
         intent.setClass(this, PopWindowTestActivity.class);
         startActivity(intent);
     }
-
-
-
-
 
 
     //===========================================================================
