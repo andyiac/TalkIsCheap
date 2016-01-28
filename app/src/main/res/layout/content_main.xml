@@ -27,32 +27,43 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClickTest"
-                android:text="onClickTest" />
+                android:text="onClickTest"
+                android:textAllCaps="false" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClickWebViewJsInteracts"
-                android:text="onClickWebViewJsInteracts" />
+                android:text="onClickWebViewJsInteracts"
+                android:textAllCaps="false" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClickAndroidInterceptorHtmlActivity"
-                android:text="onClickAndroidInterceptorHtmlActivity" />
+                android:text="Android Interceptor Html Activity"
+                android:textAllCaps="false" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClickGetPackageInfo"
-                android:text="onClick get package info" />
+                android:text="get package info"
+                android:textAllCaps="false" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClickOverScrollActivity"
-                android:text="test over scroll view" />
+                android:text="Test over scroll view"
+                android:textAllCaps="false" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickPopWindow"
+                android:text="PopWindow Test"
+                android:textAllCaps="false" />
 
         </LinearLayout>
 

@@ -26,6 +26,7 @@
         <activity android:name=".interceptor_html.AndroidInterceptorHtmlActivity" />
         <activity android:name=".interceptor_html.ShowWebImageActivity" />
         <activity android:name=".activitys.OverScrollActivity" />
+        <activity android:name=".activitys.PopWindowTestActivity" />
     </application>
 
 </manifest>

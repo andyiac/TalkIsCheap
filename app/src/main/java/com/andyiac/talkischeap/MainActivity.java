@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.andyiac.talkischeap.activitys.OverScrollActivity;
+import com.andyiac.talkischeap.activitys.PopWindowTestActivity;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
 import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
 
@@ -24,14 +25,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
 
@@ -63,6 +56,20 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+
+
+
+    public void onClickPopWindow(View view){
+        Intent intent = new Intent();
+        intent.setClass(this, PopWindowTestActivity.class);
+        startActivity(intent);
+    }
+
+
+
+
+
 
     //===========================================================================
     @Override
