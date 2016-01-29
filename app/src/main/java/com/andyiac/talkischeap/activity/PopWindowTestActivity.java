@@ -1,4 +1,4 @@
-package com.andyiac.talkischeap.activitys;
+package com.andyiac.talkischeap.activity;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;

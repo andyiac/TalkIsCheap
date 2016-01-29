@@ -9,8 +9,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.andyiac.talkischeap.activitys.OverScrollActivity;
-import com.andyiac.talkischeap.activitys.PopWindowTestActivity;
+import com.andyiac.talkischeap.activity.HorizontalRecyclerViewActivity;
+import com.andyiac.talkischeap.activity.OverScrollActivity;
+import com.andyiac.talkischeap.activity.PopWindowTestActivity;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
 import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
 
@@ -20,7 +21,6 @@ import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
  * 问题列表可以在一下找到
  * http://www.andyiac.com/stone/problemandroid/
  * 看来我应该给每个问题编号这样以后查阅起来才更方便
- *
  */
 
 public class MainActivity extends AppCompatActivity {
@@ -62,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickRecyclerView(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, HorizontalRecyclerViewActivity.class);
+        startActivity(intent);
+    }
 
     //===========================================================================
     @Override
