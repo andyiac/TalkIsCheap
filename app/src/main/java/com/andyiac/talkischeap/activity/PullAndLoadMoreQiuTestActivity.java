@@ -7,6 +7,7 @@ import android.view.DragEvent;
 import android.view.View;
 
 import com.andyiac.talkischeap.R;
+import com.orhanobut.logger.Logger;
 
 import in.srain.cube.views.ptr.PtrDefaultHandler;
 import in.srain.cube.views.ptr.PtrFrameLayout;
@@ -31,13 +32,19 @@ public class PullAndLoadMoreQiuTestActivity extends AppCompatActivity {
     }
 
     private void initView2() {
-        ptrFrame = (PtrFrameLayout) findViewById(R.id.store_house_ptr_frame);
+        ptrFrame = (PtrFrameLayout) findViewById(R.id.fragment_rotate_header_with_text_view_frame);
+        ptrFrame.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ptrFrame.autoRefresh(true);
+            }
+        }, 150);
+
         ptrFrame.setPtrHandler(new PtrDefaultHandler() {
             @Override
             public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
                 // 默认实现，根据实际情况做改动
-//                return PtrDefaultHandler.checkContentCanBePulledDown(frame, content, header);
-                return true;
+                return PtrDefaultHandler.checkContentCanBePulledDown(frame, content, header);
             }
 
             @Override
@@ -50,6 +57,7 @@ public class PullAndLoadMoreQiuTestActivity extends AppCompatActivity {
                 }, 1800);
             }
         });
+
 
     }
 
