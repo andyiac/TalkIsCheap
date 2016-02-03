@@ -76,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickRefreshQiuDaView(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, PullAndLoadMoreActivity.class);
+        startActivity(intent);
+    }
+
     //===========================================================================
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

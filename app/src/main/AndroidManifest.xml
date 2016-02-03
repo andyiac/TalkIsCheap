@@ -27,7 +27,9 @@
         <activity android:name=".interceptor_html.ShowWebImageActivity" />
         <activity android:name=".activity.OverScrollActivity" />
         <activity android:name=".activity.PopWindowTestActivity" />
-        <activity android:name=".activity.HorizontalRecyclerViewActivity"/>
+        <activity android:name=".activity.HorizontalRecyclerViewActivity" />
+        <activity android:name=".activity.PullAndLoadMoreActivity" />
+        <activity android:name=".activity.PullAndLoadMoreQiuTestActivity" />
     </application>
 
 </manifest>

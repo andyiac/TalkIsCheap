@@ -72,6 +72,13 @@
                 android:text="上拉下拉终极解决方案"
                 android:textAllCaps="false" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickRefreshQiuDaView"
+                android:text="上拉下拉 liao hu qiu demo test "
+                android:textAllCaps="false" />
+
 
         </LinearLayout>
 

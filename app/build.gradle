@@ -39,5 +39,8 @@ dependencies {
     compile rootProject.ext.dependencies["universal-image-loader"]
 
 
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+
+
 
 }
