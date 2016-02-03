@@ -50,7 +50,6 @@ public class OverScrollActivity extends AppCompatActivity {
         mOverScrollView.setOverScrollListener(new OverScrollView.OverScrollListener() {
             @Override
             public void headerScroll() {
-
                 mDatas.clear();
                 mDatas.addAll(Arrays.asList(a));
                 mAdapter.notifyDataSetChanged();
@@ -62,13 +61,10 @@ public class OverScrollActivity extends AppCompatActivity {
                         dismissLoadingProgressDialog();
                     }
                 }, 1000);
-
-
             }
 
             @Override
             public void footerScroll() {
-
                 mDatas.addAll(Arrays.asList(a));
                 mAdapter.notifyDataSetChanged();
                 showLoadingProgressDialog();
@@ -78,10 +74,8 @@ public class OverScrollActivity extends AppCompatActivity {
                         dismissLoadingProgressDialog();
                     }
                 }, 1000);
-
             }
         });
-
 
     }
 

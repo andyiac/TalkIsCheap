@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.andyiac.talkischeap.activity.HorizontalRecyclerViewActivity;
 import com.andyiac.talkischeap.activity.OverScrollActivity;
 import com.andyiac.talkischeap.activity.PopWindowTestActivity;
+import com.andyiac.talkischeap.activity.PullAndLoadMoreActivity;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
 import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
 
@@ -49,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, getPackageName(), Toast.LENGTH_SHORT).show();
     }
 
+    // Test over scroll view
     public void onClickOverScrollActivity(View view) {
         Intent intent = new Intent();
         intent.setClass(this, OverScrollActivity.class);
         startActivity(intent);
-
     }
 
     public void onClickPopWindow(View view) {
@@ -65,6 +66,13 @@ public class MainActivity extends AppCompatActivity {
     public void onClickRecyclerView(View view) {
         Intent intent = new Intent();
         intent.setClass(this, HorizontalRecyclerViewActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void onClickRefreshView(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, PullAndLoadMoreActivity.class);
         startActivity(intent);
     }
 
