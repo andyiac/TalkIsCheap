@@ -33,6 +33,8 @@ public class PullAndLoadMoreQiuTestActivity extends AppCompatActivity {
 
     private void initView2() {
         ptrFrame = (PtrFrameLayout) findViewById(R.id.fragment_rotate_header_with_text_view_frame);
+
+        // auto refresh
         ptrFrame.postDelayed(new Runnable() {
             @Override
             public void run() {

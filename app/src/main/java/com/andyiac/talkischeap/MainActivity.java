@@ -10,9 +10,9 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.andyiac.talkischeap.activity.HorizontalRecyclerViewActivity;
+import com.andyiac.talkischeap.activity.ListViewFooterLoadMoreActivity;
 import com.andyiac.talkischeap.activity.OverScrollActivity;
 import com.andyiac.talkischeap.activity.PopWindowTestActivity;
-import com.andyiac.talkischeap.activity.PullAndLoadMoreActivity;
 import com.andyiac.talkischeap.activity.PullAndLoadMoreQiuTestActivity;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
 import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
@@ -81,6 +81,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setClass(this, PullAndLoadMoreQiuTestActivity.class);
         startActivity(intent);
+    }
+
+    public void onClickLoadMore(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this,ListViewFooterLoadMoreActivity.class);
+        startActivity(intent);
+
     }
 
     //===========================================================================

@@ -30,6 +30,7 @@
         <activity android:name=".activity.HorizontalRecyclerViewActivity" />
         <activity android:name=".activity.PullAndLoadMoreActivity" />
         <activity android:name=".activity.PullAndLoadMoreQiuTestActivity" />
+        <activity android:name=".activity.ListViewFooterLoadMoreActivity" />
     </application>
 
 </manifest>
