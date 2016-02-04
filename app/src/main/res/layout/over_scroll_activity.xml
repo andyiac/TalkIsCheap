@@ -16,7 +16,6 @@
             android:background="#ffc600"
             android:orientation="vertical">
 
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -31,12 +30,6 @@
 
             </com.andyiac.talkischeap.view.scroll.ListViewForScrollView>
 
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="just for test"
-                android:textAllCaps="false" />
         </LinearLayout>
     </com.andyiac.talkischeap.view.scroll.OverScrollView>
 

@@ -7,6 +7,7 @@
 
     <ListView
         android:id="@+id/id_list_load_more_lv"
+        android:footerDividersEnabled="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
