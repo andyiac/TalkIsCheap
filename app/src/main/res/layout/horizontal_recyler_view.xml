@@ -4,9 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <WebView
-        android:id="@+id/web_view_js_interact"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_horizontal"
+        android:scrollbars="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

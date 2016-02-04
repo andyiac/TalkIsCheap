@@ -4,9 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <WebView
-        android:id="@+id/web_view_js_interact"
+    <Button
+        android:textAllCaps="false"
+        android:onClick="onClickDropDownMenu"
+        android:text="click me"
+        android:id="@+id/btn_project_case_drop_down"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

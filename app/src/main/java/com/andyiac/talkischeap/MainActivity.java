@@ -2,16 +2,28 @@ package com.andyiac.talkischeap;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.Toast;
+
+import com.andyiac.talkischeap.activity.HorizontalRecyclerViewActivity;
+import com.andyiac.talkischeap.activity.ListViewFooterLoadMoreActivity;
+import com.andyiac.talkischeap.activity.OverScrollActivity;
+import com.andyiac.talkischeap.activity.PopWindowTestActivity;
+import com.andyiac.talkischeap.activity.PullAndLoadMoreQiuTestActivity;
+import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
+import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
+
+/**
+ * 本工程致力实现各种各样的demo 和解决各种bug
+ * 开发过程中尽量不使用第三方类库实现
+ * 问题列表可以在一下找到
+ * http://www.andyiac.com/stone/problemandroid/
+ * 看来我应该给每个问题编号这样以后查阅起来才更方便
+ */
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,30 +33,62 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-    }
-
-
-    public void onClickTest(View view) {
-        Toast.makeText(this, "onTest", Toast.LENGTH_SHORT).show();
     }
 
     public void onClickWebViewJsInteracts(View view) {
-
         Intent intent = new Intent();
         intent.setClass(this, WebViewJsInteractActivity.class);
         startActivity(intent);
-
     }
 
+    public void onClickAndroidInterceptorHtmlActivity(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, AndroidInterceptorHtmlActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickGetPackageInfo(View view) {
+        Toast.makeText(this, getPackageName(), Toast.LENGTH_SHORT).show();
+    }
+
+    // Test over scroll view
+    public void onClickOverScrollActivity(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, OverScrollActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickPopWindow(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, PopWindowTestActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickRecyclerView(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, HorizontalRecyclerViewActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void onClickRefreshView(View view) {
+//        Intent intent = new Intent();
+//        intent.setClass(this, PullAndLoadMoreActivity.class);
+//        startActivity(intent);
+    }
+
+    public void onClickRefreshQiuDaView(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, PullAndLoadMoreQiuTestActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickLoadMore(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this,ListViewFooterLoadMoreActivity.class);
+        startActivity(intent);
+
+    }
 
     //===========================================================================
     @Override

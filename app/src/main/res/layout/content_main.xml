@@ -12,18 +12,83 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main">
 
-
-    <Button
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClickTest"
-        android:text="onClickTest" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClickWebViewJsInteracts"
-        android:text="onClickWebViewJsInteracts" />
+        android:layout_height="wrap_content">
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickWebViewJsInteracts"
+                android:text="onClickWebViewJsInteracts"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickAndroidInterceptorHtmlActivity"
+                android:text="Android Interceptor Html Activity"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickGetPackageInfo"
+                android:text="get package info"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickOverScrollActivity"
+                android:text="Test over scroll view"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickPopWindow"
+                android:text="PopWindow Test"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickRecyclerView"
+                android:text="横向RecyclerView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickRefreshView"
+                android:text="上拉下拉终极解决方案"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickRefreshQiuDaView"
+                android:text="上拉下拉 liao hu qiu demo test "
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickLoadMore"
+                android:text="list view 添加 footer loadmore"
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>
