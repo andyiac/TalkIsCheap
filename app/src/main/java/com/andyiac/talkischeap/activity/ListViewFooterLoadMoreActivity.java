@@ -75,7 +75,6 @@ public class ListViewFooterLoadMoreActivity extends AppCompatActivity {
                 if (lastItem == mAdapter.getCount() && scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
                     listViewProgressBar.setVisibility(View.VISIBLE);
                     loadData();
-                    mAdapter.notifyDataSetChanged();
 
                 }
 
@@ -100,6 +99,13 @@ public class ListViewFooterLoadMoreActivity extends AppCompatActivity {
         mData.add("aaa4");
         mData.add("aaa5");
         mData.add("aaa6");
+        mData.add("aaa6");
+        mData.add("aaa6");
+        mData.add("aaa6");
+        mData.add("aaa6");
+        mData.add("aaa6");
+        mData.add("aaa6");
+        mAdapter.notifyDataSetChanged();
 
     }
 }
