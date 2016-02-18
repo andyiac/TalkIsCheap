@@ -87,6 +87,20 @@
                 android:text="list view 添加 footer loadmore"
                 android:textAllCaps="false" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickBatteryManager"
+                android:text="BatteryManager use "
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickFadingTitleBar"
+                android:text="action bar 透明度 随scroll view 变化"
+                android:textAllCaps="false" />
+
 
         </LinearLayout>
 

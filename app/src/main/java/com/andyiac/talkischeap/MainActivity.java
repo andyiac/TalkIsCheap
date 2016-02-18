@@ -1,6 +1,7 @@
 package com.andyiac.talkischeap;
 
 import android.content.Intent;
+import android.os.BatteryManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.andyiac.talkischeap.activity.FadingTitleBarActivity;
 import com.andyiac.talkischeap.activity.HorizontalRecyclerViewActivity;
 import com.andyiac.talkischeap.activity.ListViewFooterLoadMoreActivity;
 import com.andyiac.talkischeap.activity.OverScrollActivity;
@@ -85,9 +87,23 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickLoadMore(View view) {
         Intent intent = new Intent();
-        intent.setClass(this,ListViewFooterLoadMoreActivity.class);
+        intent.setClass(this, ListViewFooterLoadMoreActivity.class);
         startActivity(intent);
 
+    }
+
+
+    public void onClickBatteryManager(View view) {
+        BatteryManager bm = (BatteryManager) getSystemService(BATTERY_SERVICE);
+//        bm.isCharging();
+//        Toast.makeText(this, bm.isCharging() + "", Toast.LENGTH_SHORT).show();
+//        int status = bm.getIntProperty(Integer.MIN_VALUE);
+
+    }
+
+    public void onClickFadingTitleBar(View view) {
+        Intent intent = new Intent(this, FadingTitleBarActivity.class);
+        startActivity(intent);
     }
 
     //===========================================================================
