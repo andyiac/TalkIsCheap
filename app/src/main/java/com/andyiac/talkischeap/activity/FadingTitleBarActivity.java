@@ -9,11 +9,21 @@ import android.widget.ScrollView;
 
 import com.andyiac.talkischeap.R;
 import com.andyiac.talkischeap.view.custom.NotifyingScrollView;
+import com.orhanobut.logger.Logger;
 
 /**
  * @author andyiac
  * @date 2/18/16
  * @web www.andyiac.com
+ * <p/>
+ * <p/>
+ * <p/>
+ * this is refer http://cyrilmottier.com/2013/05/24/pushing-the-actionbar-to-the-next-level/
+ * <p/>
+ * for more demo
+ * https://github.com/AChep/Header2ActionBar
+ * <p/>
+ * https://github.com/ManuelPeinado/FadingActionBar  star 2564
  */
 public class FadingTitleBarActivity extends AppCompatActivity {
 
@@ -38,15 +48,13 @@ public class FadingTitleBarActivity extends AppCompatActivity {
     }
 
 
-
-
-
     private Drawable mActionBarBackgroundDrawable;
 
 
     private NotifyingScrollView.OnScrollChangedListener mOnScrollChangedListener = new NotifyingScrollView.OnScrollChangedListener() {
         public void onScrollChanged(ScrollView who, int l, int t, int oldl, int oldt) {
-            final int headerHeight = findViewById(R.id.ll_title_bar_header).getHeight() ;
+            final int headerHeight = findViewById(R.id.ll_title_bar_header).getHeight() + 100;
+            Logger.e(" header height =====>>" + headerHeight);
             //- getActionBar().getHeight();
             final float ratio = (float) Math.min(Math.max(t, 0), headerHeight) / headerHeight;
             final int newAlpha = (int) (ratio * 255);
