@@ -53,10 +53,11 @@ public class FadingTitleBarActivity extends AppCompatActivity {
 
     private NotifyingScrollView.OnScrollChangedListener mOnScrollChangedListener = new NotifyingScrollView.OnScrollChangedListener() {
         public void onScrollChanged(ScrollView who, int l, int t, int oldl, int oldt) {
-            final int headerHeight = findViewById(R.id.ll_title_bar_header).getHeight() + 100;
-            Logger.e(" header height =====>>" + headerHeight);
+            final int headerHeight = findViewById(R.id.ll_title_bar_header).getHeight();
+            Logger.e(" header height =====>>" + headerHeight + "==== t=====>> " + t);
             //- getActionBar().getHeight();
             final float ratio = (float) Math.min(Math.max(t, 0), headerHeight) / headerHeight;
+            Logger.e(" ratio =====>>" + ratio);
             final int newAlpha = (int) (ratio * 255);
             mActionBarBackgroundDrawable.setAlpha(newAlpha);
         }
