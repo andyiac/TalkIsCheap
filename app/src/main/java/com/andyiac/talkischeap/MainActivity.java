@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.andyiac.talkischeap.activity.BottomSheetActivity;
 import com.andyiac.talkischeap.activity.FadingTitleBarActivity;
 import com.andyiac.talkischeap.activity.HorizontalRecyclerViewActivity;
 import com.andyiac.talkischeap.activity.ListViewFooterLoadMoreActivity;
@@ -104,6 +105,13 @@ public class MainActivity extends AppCompatActivity {
     public void onClickFadingTitleBar(View view) {
         Intent intent = new Intent(this, FadingTitleBarActivity.class);
         startActivity(intent);
+    }
+
+    public void onClickBottomSheet(View view) {
+
+        Intent intent = new Intent(this, BottomSheetActivity.class);
+        startActivity(intent);
+
     }
 
     //===========================================================================
