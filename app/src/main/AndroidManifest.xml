@@ -3,6 +3,9 @@
     package="com.andyiac.talkischeap">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:name=".ClientApplication"
         android:allowBackup="true"
@@ -31,12 +34,12 @@
         <activity android:name=".activity.PullAndLoadMoreActivity" />
         <activity android:name=".activity.PullAndLoadMoreQiuTestActivity" />
         <activity android:name=".activity.ListViewFooterLoadMoreActivity" />
-        <activity android:name=".activity.PDFViewActivity"/>
+        <activity android:name=".activity.PDFViewActivity" />
 
         <activity
             android:name=".activity.FadingTitleBarActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-       <activity android:name=".activity.BottomSheetActivity"/>
+        <activity android:name=".activity.BottomSheetActivity" />
     </application>
 
 </manifest>

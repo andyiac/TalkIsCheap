@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
+//apply plugin: 'com.neenbedankt.android-apt'
 
 
 android {
@@ -43,6 +43,9 @@ dependencies {
     compile 'com.cocosw:bottomsheet:1.+@aar'
 
     compile 'com.bigkoo:alertview:1.0.1'
+
+    // compile 'cn.aigestudio.downloader:Downloader:1.4.3'
+    compile 'com.liulishuo.filedownloader:library:0.2.0'
 
 
 
