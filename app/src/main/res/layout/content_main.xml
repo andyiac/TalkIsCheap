@@ -107,6 +107,13 @@
                 android:onClick="onClickBottomSheet"
                 android:text=" bottom sheet "
                 android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickViewPdf"
+                android:text=" pdf viewer "
+                android:textAllCaps="false" />
         </LinearLayout>
 
     </ScrollView>

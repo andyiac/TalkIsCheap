@@ -31,6 +31,7 @@
         <activity android:name=".activity.PullAndLoadMoreActivity" />
         <activity android:name=".activity.PullAndLoadMoreQiuTestActivity" />
         <activity android:name=".activity.ListViewFooterLoadMoreActivity" />
+        <activity android:name=".activity.PDFViewActivity"/>
 
         <activity
             android:name=".activity.FadingTitleBarActivity"

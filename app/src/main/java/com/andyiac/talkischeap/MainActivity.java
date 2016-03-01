@@ -15,6 +15,7 @@ import com.andyiac.talkischeap.activity.FadingTitleBarActivity;
 import com.andyiac.talkischeap.activity.HorizontalRecyclerViewActivity;
 import com.andyiac.talkischeap.activity.ListViewFooterLoadMoreActivity;
 import com.andyiac.talkischeap.activity.OverScrollActivity;
+import com.andyiac.talkischeap.activity.PDFViewActivity;
 import com.andyiac.talkischeap.activity.PopWindowTestActivity;
 import com.andyiac.talkischeap.activity.PullAndLoadMoreQiuTestActivity;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
@@ -112,6 +113,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BottomSheetActivity.class);
         startActivity(intent);
 
+    }
+
+    public void onClickViewPdf(View view) {
+        Intent intent = new Intent(this, PDFViewActivity.class);
+        startActivity(intent);
     }
 
     //===========================================================================
