@@ -14,6 +14,7 @@ import com.andyiac.talkischeap.activity.ListViewFooterLoadMoreActivity;
 import com.andyiac.talkischeap.activity.OverScrollActivity;
 import com.andyiac.talkischeap.activity.PopWindowTestActivity;
 import com.andyiac.talkischeap.activity.PullAndLoadMoreQiuTestActivity;
+import com.andyiac.talkischeap.activity.ScaleAnimationActivity;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
 import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
 
@@ -85,9 +86,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickLoadMore(View view) {
         Intent intent = new Intent();
-        intent.setClass(this,ListViewFooterLoadMoreActivity.class);
+        intent.setClass(this, ListViewFooterLoadMoreActivity.class);
         startActivity(intent);
 
+    }
+
+    public void onClickTestAnimation(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, ScaleAnimationActivity.class);
+        startActivity(intent);
     }
 
     //===========================================================================
