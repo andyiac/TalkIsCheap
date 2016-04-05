@@ -49,11 +49,33 @@ public class ScaleAnimationActivity extends AppCompatActivity {
         Animation anim = new ScaleAnimation(
                 startScale, endScale, // Start and end values for the X axis scaling
                 startScale, endScale, // Start and end values for the Y axis scaling
-                Animation.RELATIVE_TO_SELF, 0.5f, // Pivot point of X scaling
-                Animation.RELATIVE_TO_SELF, 0.5f); // Pivot point of Y scaling
+                Animation.RELATIVE_TO_SELF, 0.5f, // Pivot point of X scaling  // 中心点 of X
+                Animation.RELATIVE_TO_SELF, 0.5f); // Pivot point of Y scaling // 中心点 of Y
         anim.setFillAfter(true); // Needed to keep the result of the animation
         anim.setDuration(2000);
         v.startAnimation(anim);
     }
+
+
+    /**
+
+     fromX：起始X坐标上的伸缩尺寸。
+
+     toX：结束X坐标上的伸缩尺寸。
+
+     fromY：起始Y坐标上的伸缩尺寸。
+
+     toY：结束Y坐标上的伸缩尺寸。
+
+     pivotXType：X轴的伸缩模式，可以取值为ABSOLUTE、RELATIVE_TO_SELF、RELATIVE_TO_PARENT。
+
+     pivotXValue：X坐标的伸缩值。
+
+     pivotYType：Y轴的伸缩模式，可以取值为ABSOLUTE、RELATIVE_TO_SELF、RELATIVE_TO_PARENT。
+
+     pivotYValue：Y坐标的伸缩值。
+
+     */
+
 
 }
