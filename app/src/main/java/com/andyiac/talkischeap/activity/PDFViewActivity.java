@@ -5,12 +5,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
 import com.andyiac.talkischeap.R;
-import com.andyiac.talkischeap.utils.StorageUtils;
+import com.andyiac.talkischeap.utils.downloader.SimpleDownloader;
+import com.andyiac.talkischeap.utils.downloader.StorageUtils;
 import com.liulishuo.filedownloader.BaseDownloadTask;
 import com.liulishuo.filedownloader.FileDownloadListener;
 import com.liulishuo.filedownloader.FileDownloader;
@@ -26,18 +26,62 @@ import java.io.File;
 public class PDFViewActivity extends AppCompatActivity {
 
     private String savePath;
+    String pdfUrl = "http://www.andyiac.com/pdf/problemandroid.pdf";
+    String pdfUrl2 = "http://www.pdf995.com/samples/pdf.pdf";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pdf_view_activity);
+        savePath = StorageUtils.getCacheDirectory(this).getPath();
+        //showPdf(); // todo 直接让webView 显示pdf 在国内根本不可行
 
-        //showPdf();
+        // downloadPdf(pdfUrl2, savePath); // 此方法savePath是绝对方法
 
-        String pdfUrl = "http://www.andyiac.com/pdf/problemandroid.pdf";
-        String pdfUrl2 = "http://www.pdf995.com/samples/pdf.pdf";
-        savePath = StorageUtils.getCacheDirectory(this).getPath() + "aaa.pdf";
-        downloadPdf(pdfUrl2, savePath);
+        testDemoDownloader();
+
+    }
+
+
+    private void testDemoDownloader() {
+        SimpleDownloader downloader = new SimpleDownloader(this, pdfUrl, savePath, "abcdefg.pdf");
+        downloader.startDownload();
+        downloader.setOnDownloadFinishListener(new SimpleDownloader.OnDownloadFinishListener() {
+
+            @Override
+            public void onDownloadFinish(String fileAbsolutePath) {
+                startActivity(getPdfFileIntent(fileAbsolutePath));
+
+                Logger.e("=======open file=====" + fileAbsolutePath);
+            }
+
+            @Override
+            public void downloadProgress(int progress) {
+                Logger.e("======progress=====>>>" + progress);
+            }
+
+            @Override
+            public void onDownloadIntercept(boolean intercept) {
+
+            }
+        });
+
+    }
+
+    //android获取一个用于打开PDF文件的intent
+    public static Intent getPdfFileIntent(String param) {
+
+        Intent intent = new Intent("android.intent.action.VIEW");
+
+        intent.addCategory("android.intent.category.DEFAULT");
+
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        Uri uri = Uri.fromFile(new File(param));
+
+        intent.setDataAndType(uri, "application/pdf");
+
+        return intent;
     }
 
 
@@ -103,20 +147,4 @@ public class PDFViewActivity extends AppCompatActivity {
 
     }
 
-    //android获取一个用于打开PDF文件的intent
-    public static Intent getPdfFileIntent(String param) {
-
-        Intent intent = new Intent("android.intent.action.VIEW");
-
-        intent.addCategory("android.intent.category.DEFAULT");
-
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        Uri uri = Uri.fromFile(new File(param));
-
-        intent.setDataAndType(uri, "application/pdf");
-
-        return intent;
-
-    }
 }
