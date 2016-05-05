@@ -32,6 +32,7 @@
         <activity android:name=".activity.PullAndLoadMoreQiuTestActivity" />
         <activity android:name=".activity.ListViewFooterLoadMoreActivity" />
         <activity android:name=".activity.ScaleAnimationActivity" />
+        <activity android:name=".activity.image.cropper.ScissorsActivity"/>
     </application>
 
 </manifest>
