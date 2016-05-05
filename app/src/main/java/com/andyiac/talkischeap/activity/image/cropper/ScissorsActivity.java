@@ -39,6 +39,7 @@ public class ScissorsActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.scissors_activity);
         initView();
+        mCropView.extensions().pickUsing(this, RequestCodes.PICK_IMAGE_FROM_GALLERY);
     }
 
     private void initView() {
@@ -82,6 +83,7 @@ public class ScissorsActivity extends AppCompatActivity {
             Uri galleryPictureUri = data.getData();
 
             mCropView.extensions().load(galleryPictureUri);
+            mCropView.setViewportRatio(1f);
 
             //updateButtons();
         }

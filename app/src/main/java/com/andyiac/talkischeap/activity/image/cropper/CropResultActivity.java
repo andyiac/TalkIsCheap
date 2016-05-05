@@ -39,8 +39,8 @@ public class CropResultActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_crop_result);
-        resultView = (ImageView) findViewById(R.id.result_image);
 
+        resultView = (ImageView) findViewById(R.id.result_image);
 
         String filePath = getIntent().getStringExtra(EXTRA_FILE_PATH);
         File imageFile = new File(filePath);
