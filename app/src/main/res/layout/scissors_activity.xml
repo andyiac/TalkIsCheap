@@ -17,7 +17,7 @@
         android:layout_gravity="bottom|right"
         android:layout_margin="8dp"
         android:onClick="onClickStartCrop"
-        android:text="剪切" />
+        android:text="使用" />
 
 
     <Button
