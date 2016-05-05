@@ -99,7 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClickScissors"
-                android:text=""
+                android:text="图片剪切 scissors"
                 android:textAllCaps="false" />
 
         </LinearLayout>
