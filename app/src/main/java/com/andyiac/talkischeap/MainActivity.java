@@ -15,7 +15,7 @@ import com.andyiac.talkischeap.activity.OverScrollActivity;
 import com.andyiac.talkischeap.activity.PopWindowTestActivity;
 import com.andyiac.talkischeap.activity.PullAndLoadMoreQiuTestActivity;
 import com.andyiac.talkischeap.activity.ScaleAnimationActivity;
-import com.andyiac.talkischeap.activity.SoftInputWithBottomWidgetActivity;
+import com.andyiac.talkischeap.activity.SoftInputModeTestActivity;
 import com.andyiac.talkischeap.activity.image.cropper.ScissorsActivity;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
 import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickLinearLayoutSoftInputTest(View view) {
         Intent intent = new Intent();
-        intent.setClass(this, SoftInputWithBottomWidgetActivity.class);
+        intent.setClass(this, SoftInputModeTestActivity.class);
         startActivity(intent);
 
     }

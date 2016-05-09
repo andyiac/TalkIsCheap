@@ -13,7 +13,7 @@ import com.andyiac.talkischeap.R;
  * andyiac  16/5/9
  */
 
-public class SoftInputWithBottomWidgetActivity extends AppCompatActivity {
+public class SoftInputModeTestActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
