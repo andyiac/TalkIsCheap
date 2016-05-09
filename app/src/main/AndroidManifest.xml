@@ -34,6 +34,12 @@
         <activity android:name=".activity.ScaleAnimationActivity" />
         <activity android:name=".activity.image.cropper.ScissorsActivity" />
         <activity android:name=".activity.image.cropper.CropResultActivity" />
+
+        <activity
+            android:name=".activity.SoftInputWithBottomWidgetActivity"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
     </application>
 
 

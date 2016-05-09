@@ -102,6 +102,21 @@
                 android:text="图片剪切 scissors"
                 android:textAllCaps="false" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickImageMemoryTest"
+                android:text="一张图占用内存测试"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickLinearLayoutSoftInputTest"
+                android:text="底部控件，随软键盘弹出，跟着上移 "
+                android:textAllCaps="false" />
+
+
         </LinearLayout>
 
     </ScrollView>
