@@ -21,6 +21,8 @@ public class EventBusDemoActivity extends AppCompatActivity {
 
     private TextView testTvView;
 
+    private int age = 18;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +35,7 @@ public class EventBusDemoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EventBusDemoActivity.MessageEvent.User user = new EventBusDemoActivity.MessageEvent.User();
                 user.setName("andyiac");
-                user.setAge("18");
+                user.setAge(age++ + "");
 
                 EventBus.getDefault().post(user);
 
@@ -55,7 +57,7 @@ public class EventBusDemoActivity extends AppCompatActivity {
         EventBus.getDefault().unregister(this);
     }
 
-   
+
     @Subscribe
     public void onEvent(MessageEvent.User user) {
         testTvView.setText(user.getName() + "\n" + user.getAge());
