@@ -116,6 +116,12 @@
                 android:text="底部控件，随软键盘弹出，跟着上移 "
                 android:textAllCaps="false" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickEventBusDemo"
+                android:text=" Event bus demo"
+                android:textAllCaps="false" />
 
         </LinearLayout>
 

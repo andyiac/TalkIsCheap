@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.andyiac.talkischeap.activity.EventBusDemoActivity;
 import com.andyiac.talkischeap.activity.HorizontalRecyclerViewActivity;
 import com.andyiac.talkischeap.activity.ListViewFooterLoadMoreActivity;
 import com.andyiac.talkischeap.activity.OverScrollActivity;
@@ -134,6 +135,12 @@ public class MainActivity extends AppCompatActivity {
         intent.setClass(this, SoftInputModeTestActivity.class);
         startActivity(intent);
 
+    }
+
+    public void onClickEventBusDemo(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, EventBusDemoActivity.class);
+        startActivity(intent);
     }
 
 }
