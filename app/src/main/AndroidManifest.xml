@@ -40,6 +40,20 @@
             android:name=".activity.FadingTitleBarActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".activity.BottomSheetActivity" />
+        <activity android:name=".activity.ScaleAnimationActivity" />
+        <activity android:name=".activity.image.cropper.ScissorsActivity" />
+        <activity android:name=".activity.image.cropper.CropResultActivity" />
+        <activity android:name=".activity.EventBusDemoActivity" />
+
+        <activity
+            android:name=".activity.SoftInputModeTestActivity"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
     </application>
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

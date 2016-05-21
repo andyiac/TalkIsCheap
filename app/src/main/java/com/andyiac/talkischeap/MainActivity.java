@@ -12,12 +12,16 @@ import android.widget.Toast;
 
 import com.andyiac.talkischeap.activity.BottomSheetActivity;
 import com.andyiac.talkischeap.activity.FadingTitleBarActivity;
+import com.andyiac.talkischeap.activity.EventBusDemoActivity;
 import com.andyiac.talkischeap.activity.HorizontalRecyclerViewActivity;
 import com.andyiac.talkischeap.activity.ListViewFooterLoadMoreActivity;
 import com.andyiac.talkischeap.activity.OverScrollActivity;
 import com.andyiac.talkischeap.activity.PDFViewActivity;
 import com.andyiac.talkischeap.activity.PopWindowTestActivity;
 import com.andyiac.talkischeap.activity.PullAndLoadMoreQiuTestActivity;
+import com.andyiac.talkischeap.activity.ScaleAnimationActivity;
+import com.andyiac.talkischeap.activity.SoftInputModeTestActivity;
+import com.andyiac.talkischeap.activity.image.cropper.ScissorsActivity;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
 import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
 
@@ -38,6 +42,30 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
+
+    //===========================================================================
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+    //===========================================================================
 
     public void onClickWebViewJsInteracts(View view) {
         Intent intent = new Intent();
@@ -120,26 +148,29 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //===========================================================================
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    public void onClickTestAnimation(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, ScaleAnimationActivity.class);
+        startActivity(intent);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    public void onClickScissors(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, ScissorsActivity.class);
+        startActivity(intent);
     }
+
+    public void onClickLinearLayoutSoftInputTest(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, SoftInputModeTestActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void onClickEventBusDemo(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, EventBusDemoActivity.class);
+        startActivity(intent);
+    }
+
 }

@@ -111,9 +111,46 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="onClickTestAnimation"
+                android:text="Test ScaleAnimation view"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:onClick="onClickViewPdf"
                 android:text=" pdf viewer "
                 android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickScissors"
+                android:text="图片剪切 scissors"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickImageMemoryTest"
+                android:text="一张图占用内存测试"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickLinearLayoutSoftInputTest"
+                android:text="底部控件，随软键盘弹出，跟着上移 "
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickEventBusDemo"
+                android:text=" Event bus demo"
+                android:textAllCaps="false" />
+
+>>>>>>> 098235efec970ab1bd94b46c582585e076df3fa1
         </LinearLayout>
 
     </ScrollView>
