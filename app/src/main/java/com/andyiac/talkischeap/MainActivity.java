@@ -14,6 +14,7 @@ import com.andyiac.talkischeap.activity.BottomSheetActivity;
 import com.andyiac.talkischeap.activity.FadingTitleBarActivity;
 import com.andyiac.talkischeap.activity.EventBusDemoActivity;
 import com.andyiac.talkischeap.activity.HorizontalRecyclerViewActivity;
+import com.andyiac.talkischeap.activity.ImageBitmapMemoryTestActivity;
 import com.andyiac.talkischeap.activity.ListViewFooterLoadMoreActivity;
 import com.andyiac.talkischeap.activity.OverScrollActivity;
 import com.andyiac.talkischeap.activity.PDFViewActivity;
@@ -137,7 +138,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickBottomSheet(View view) {
-
         Intent intent = new Intent(this, BottomSheetActivity.class);
         startActivity(intent);
 
@@ -158,6 +158,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setClass(this, ScissorsActivity.class);
         startActivity(intent);
+    }
+
+    public void onClickImageMemoryTest(View view ){
+       Intent intent = new Intent();
+        intent.setClass(MainActivity.this, ImageBitmapMemoryTestActivity.class);
+        startActivity(intent);
+
     }
 
     public void onClickLinearLayoutSoftInputTest(View view) {
