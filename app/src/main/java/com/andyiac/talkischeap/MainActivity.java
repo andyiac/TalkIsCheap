@@ -17,6 +17,7 @@ import com.andyiac.talkischeap.activity.PopWindowTestActivity;
 import com.andyiac.talkischeap.activity.PullAndLoadMoreQiuTestActivity;
 import com.andyiac.talkischeap.activity.ScaleAnimationActivity;
 import com.andyiac.talkischeap.activity.SoftInputModeTestActivity;
+import com.andyiac.talkischeap.activity.XfzMeetingListCustomViewActivity;
 import com.andyiac.talkischeap.activity.image.cropper.ScissorsActivity;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
 import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
@@ -143,4 +144,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickXfzMeetingListCustomView(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, XfzMeetingListCustomViewActivity.class);
+        startActivity(intent);
+    }
 }
