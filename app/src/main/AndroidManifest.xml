@@ -35,6 +35,7 @@
         <activity android:name=".activity.image.cropper.ScissorsActivity" />
         <activity android:name=".activity.image.cropper.CropResultActivity" />
         <activity android:name=".activity.EventBusDemoActivity" />
+        <activity android:name=".activity.XfzMeetingListCustomViewActivity"/>
 
         <activity
             android:name=".activity.SoftInputModeTestActivity"
