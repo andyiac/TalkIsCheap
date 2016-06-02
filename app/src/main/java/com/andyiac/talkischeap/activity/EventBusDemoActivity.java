@@ -50,7 +50,6 @@ public class EventBusDemoActivity extends AppCompatActivity {
         EventBus.getDefault().register(this);
     }
 
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
