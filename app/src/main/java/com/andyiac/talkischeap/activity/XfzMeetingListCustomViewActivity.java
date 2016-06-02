@@ -9,6 +9,9 @@ import com.andyiac.talkischeap.R;
 /**
  * andyiac
  * 16/6/2
+ *
+ *
+ * android 中
  */
 
 public class XfzMeetingListCustomViewActivity extends AppCompatActivity{
@@ -17,5 +20,13 @@ public class XfzMeetingListCustomViewActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.xfz_meeting_list_custom_view_activity);
+        initView();
     }
+
+
+    private void initView(){
+
+    }
+
+
 }
