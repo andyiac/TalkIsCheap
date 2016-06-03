@@ -1,22 +1,16 @@
 package com.andyiac.talkischeap.activity;
 
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.andyiac.talkischeap.R;
 import com.andyiac.talkischeap.adapter.XFZMeetingListAdapter;
 import com.orhanobut.logger.Logger;
-
-import org.w3c.dom.Text;
 
 /**
  * andyiac
@@ -31,8 +25,9 @@ public class XfzMeetingListCustomViewActivity extends AppCompatActivity {
 
     ViewPager viewPager;
     XFZMeetingListAdapter adapter;
-    Button mBtnLeft;
-    Button mBtnRight;
+
+    ImageView mArrowBtnLeft;
+    ImageView mArrowBtnRight;
 
 
     @Override
@@ -73,21 +68,20 @@ public class XfzMeetingListCustomViewActivity extends AppCompatActivity {
             }
         });
 
-
-        mBtnRight = (Button) findViewById(R.id.xfz_date_slider_right_btn);
-        mBtnRight.setOnClickListener(new View.OnClickListener() {
+        mArrowBtnRight = (ImageView) findViewById(R.id.xfz_date_slider_right_btn);
+        mArrowBtnRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
             }
         });
 
-        mBtnLeft = (Button) findViewById(R.id.xfz_date_slider_left_btn);
-        mBtnLeft.setOnClickListener(new View.OnClickListener() {
+        mArrowBtnLeft = (ImageView) findViewById(R.id.xfz_date_slider_left_btn);
+        mArrowBtnLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int current = viewPager.getCurrentItem();
-                if (current - 1 > 0) {
+                if (current - 1 >= 0) {
                     viewPager.setCurrentItem(current - 1, true);
                 }
             }

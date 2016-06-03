@@ -1,37 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="#f8f8f8"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+        android:layout_height="90dp"
+        android:orientation="horizontal">
 
-
-        <Button
-            android:id="@+id/xfz_date_slider_left_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="pre" />
 
         <android.support.v4.view.ViewPager
             android:id="@+id/xfz_pager"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:background="#ff998855" />
-
-        <Button
-            android:id="@+id/xfz_date_slider_right_btn"
-            android:layout_width="wrap_content"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="next" />
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" />
+
+        <ImageView
+            android:id="@+id/xfz_date_slider_left_btn"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:src="@drawable/meeting_date_arrow_left"
+            android:text="pre" />
+
+        <ImageView
+            android:id="@+id/xfz_date_slider_right_btn"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@drawable/meeting_date_arrow_right" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <ListView
+            android:background="@android:color/white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ListView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f8f8f8">
+
+        </ListView>
+
+        <ListView
+            android:background="@android:color/white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </ListView>
+
+        <ListView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f8f8f8">
+
+        </ListView>
+
+
     </LinearLayout>
-
-
-
-
 
 </LinearLayout>

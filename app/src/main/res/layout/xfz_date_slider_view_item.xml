@@ -3,76 +3,109 @@
     android:id="@+id/xfz_data_slider_item_ll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_weight="1"
-        android:background="#ffaa3344"
         android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/xfz_data_slider_item_title1"
             android:layout_width="80dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:hint="1" />
+            android:text="今天"
+            android:textColor="#ffc600"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/xfz_data_slider_item_content1"
             android:layout_width="80dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="今天" />
+            android:paddingTop="4dp"
+            android:text="05月01" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/material_blue_grey_800"
         android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/xfz_data_slider_item_title2"
             android:layout_width="80dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:hint="2" />
+            android:hint="2"
+            android:text="明天"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/xfz_data_slider_item_content2"
             android:layout_width="80dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="明天" />
+            android:paddingTop="4dp"
+            android:text="05月01" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="#c9c9c9c9"
         android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/xfz_data_slider_item_title3"
             android:layout_width="80dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:hint="3" />
+            android:text="周六"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/xfz_data_slider_item_content3"
             android:layout_width="80dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
+            android:paddingTop="4dp"
             android:text="后天" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="#00ffc9c9"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/xfz_data_slider_item_title4"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="周日"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/xfz_data_slider_item_content4"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="05月12日" />
+    </LinearLayout>
 
 </LinearLayout>
