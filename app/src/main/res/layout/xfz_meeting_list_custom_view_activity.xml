@@ -4,11 +4,34 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/xfz_pager"
-        android:background="#ff998855"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/xfz_date_slider_left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pre" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/xfz_pager"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="#ff998855" />
+
+        <Button
+            android:id="@+id/xfz_date_slider_right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="next" />
+    </LinearLayout>
+
+
+
+
 
 </LinearLayout>
