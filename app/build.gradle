@@ -47,6 +47,7 @@ dependencies {
 
 
     compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.nineoldandroids:library:2.4.0'
 
 
 }
