@@ -31,7 +31,6 @@ public class XFZMeetingListAdapter extends PagerAdapter {
     }
 
 
-
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         container.addView(mContent.get(position));

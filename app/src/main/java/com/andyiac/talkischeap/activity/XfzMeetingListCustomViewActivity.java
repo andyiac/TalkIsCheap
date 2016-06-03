@@ -38,13 +38,13 @@ public class XfzMeetingListCustomViewActivity extends AppCompatActivity {
 
         adapter = new XFZMeetingListAdapter();
 
-
         viewPager.setAdapter(adapter);
 
         for (int i = 0; i < 10; i++) {
             View v = LayoutInflater.from(this).inflate(R.layout.xfz_date_slider_view_item, null);
             adapter.addPagerView(v);
         }
+
     }
 
 
