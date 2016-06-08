@@ -6,7 +6,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.andyiac.talkischeap.R;
-import com.andyiac.talkischeap.interact_js.HostJsScope;
 
 import java.util.HashMap;
 import java.util.Map;

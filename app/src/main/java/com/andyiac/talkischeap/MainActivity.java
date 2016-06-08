@@ -1,6 +1,7 @@
 package com.andyiac.talkischeap;
 
 import android.content.Intent;
+import android.os.BatteryManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,10 +10,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.andyiac.talkischeap.activity.BottomSheetActivity;
+import com.andyiac.talkischeap.activity.FadingTitleBarActivity;
 import com.andyiac.talkischeap.activity.EventBusDemoActivity;
 import com.andyiac.talkischeap.activity.HorizontalRecyclerViewActivity;
+import com.andyiac.talkischeap.activity.ImageBitmapMemoryTestActivity;
 import com.andyiac.talkischeap.activity.ListViewFooterLoadMoreActivity;
 import com.andyiac.talkischeap.activity.OverScrollActivity;
+import com.andyiac.talkischeap.activity.PDFViewActivity;
 import com.andyiac.talkischeap.activity.PopWindowTestActivity;
 import com.andyiac.talkischeap.activity.PullAndLoadMoreQiuTestActivity;
 import com.andyiac.talkischeap.activity.ScaleAnimationActivity;
@@ -119,6 +124,31 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void onClickBatteryManager(View view) {
+        BatteryManager bm = (BatteryManager) getSystemService(BATTERY_SERVICE);
+//        bm.isCharging();
+//        Toast.makeText(this, bm.isCharging() + "", Toast.LENGTH_SHORT).show();
+//        int status = bm.getIntProperty(Integer.MIN_VALUE);
+
+    }
+
+    public void onClickFadingTitleBar(View view) {
+        Intent intent = new Intent(this, FadingTitleBarActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickBottomSheet(View view) {
+        Intent intent = new Intent(this, BottomSheetActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void onClickViewPdf(View view) {
+        Intent intent = new Intent(this, PDFViewActivity.class);
+        startActivity(intent);
+    }
+
     public void onClickTestAnimation(View view) {
         Intent intent = new Intent();
         intent.setClass(this, ScaleAnimationActivity.class);
@@ -129,6 +159,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setClass(this, ScissorsActivity.class);
         startActivity(intent);
+    }
+
+    public void onClickImageMemoryTest(View view ){
+       Intent intent = new Intent();
+        intent.setClass(MainActivity.this, ImageBitmapMemoryTestActivity.class);
+        startActivity(intent);
+
     }
 
     public void onClickLinearLayoutSoftInputTest(View view) {

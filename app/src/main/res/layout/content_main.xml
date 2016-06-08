@@ -87,12 +87,39 @@
                 android:text="list view 添加 footer loadmore"
                 android:textAllCaps="false" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickBatteryManager"
+                android:text="BatteryManager use "
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickFadingTitleBar"
+                android:text="action bar 透明度 随scroll view 变化"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickBottomSheet"
+                android:text=" bottom sheet "
+                android:textAllCaps="false" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClickTestAnimation"
                 android:text="Test ScaleAnimation view"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickViewPdf"
+                android:text=" pdf viewer "
                 android:textAllCaps="false" />
 
             <Button
@@ -107,7 +134,8 @@
                 android:layout_height="wrap_content"
                 android:onClick="onClickImageMemoryTest"
                 android:text="一张图占用内存测试"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:elevation="0dp" />
 
             <Button
                 android:layout_width="match_parent"

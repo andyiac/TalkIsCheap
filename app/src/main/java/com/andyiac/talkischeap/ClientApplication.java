@@ -2,6 +2,7 @@ package com.andyiac.talkischeap;
 
 import android.app.Application;
 
+import com.liulishuo.filedownloader.FileDownloader;
 import com.orhanobut.logger.Logger;
 
 
@@ -18,6 +19,7 @@ public class ClientApplication extends Application {
     public void onCreate() {
         super.onCreate();
         initLogger();
+        FileDownloader.init(this);
     }
 
     private void initLogger() {
