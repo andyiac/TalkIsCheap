@@ -2,6 +2,9 @@ package com.andyiac.talkischeap;
 
 import org.junit.Test;
 
+import java.util.Collections;
+import java.util.Map;
+
 import static org.junit.Assert.*;
 
 /**
@@ -11,5 +14,12 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
+    }
+
+
+    @Test
+    public void collections_test(){
+
+
     }
 }

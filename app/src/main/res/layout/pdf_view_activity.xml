@@ -11,7 +11,7 @@
         <!--android:layout_height="match_parent"/>-->
 
 
-    <com.joanzapata.pdfview.PDFView
+    <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdfview"
 
         android:layout_width="match_parent"

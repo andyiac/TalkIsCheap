@@ -161,8 +161,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClickImageMemoryTest(View view ){
-       Intent intent = new Intent();
+    public void onClickImageMemoryTest(View view) {
+        Intent intent = new Intent();
         intent.setClass(MainActivity.this, ImageBitmapMemoryTestActivity.class);
         startActivity(intent);
 
@@ -182,8 +182,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickXfzMeetingListCustomView(View view) {
+
         Intent intent = new Intent();
         intent.setClass(this, XfzMeetingListCustomViewActivity.class);
         startActivity(intent);
+
+
     }
+
+
+    /**
+     * 全角半角测试
+     */
+    public void test_half_width() {
+        /*
+        // 全角 ＠
+        // 半角 @
+        String s = "ning＠xfz.cn";
+        String s2 = "ning@xfz.cn";
+
+        if(s.contains("@")){
+            Toast.makeText(MainActivity.this, "包含 全角at", Toast.LENGTH_SHORT).show();
+        }
+        */
+    }
+
+
 }

@@ -56,6 +56,7 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.nineoldandroids:library:2.4.0'
 
-    compile 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
+    compile 'com.github.barteksc:android-pdf-viewer:1.0.0'
+
 
 }

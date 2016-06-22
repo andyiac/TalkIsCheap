@@ -13,11 +13,8 @@ import android.webkit.WebView;
 import com.andyiac.talkischeap.R;
 import com.andyiac.talkischeap.utils.downloader.SimpleDownloader;
 import com.andyiac.talkischeap.utils.downloader.StorageUtils;
-import com.joanzapata.pdfview.PDFView;
-import com.joanzapata.pdfview.listener.OnDrawListener;
-import com.joanzapata.pdfview.listener.OnLoadCompleteListener;
-import com.joanzapata.pdfview.listener.OnPageChangeListener;
-import com.joanzapata.pdfview.util.FileUtils;
+import com.github.barteksc.pdfviewer.PDFView;
+import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.liulishuo.filedownloader.BaseDownloadTask;
 import com.liulishuo.filedownloader.FileDownloadListener;
 import com.liulishuo.filedownloader.FileDownloader;
@@ -33,8 +30,8 @@ import java.io.File;
 public class PDFViewActivity extends AppCompatActivity {
 
     private String savePath;
-    String pdfUrl2= "http://www.andyiac.com/pdf/problemandroid.pdf";
-    String pdfUrl = "http://www.pdf995.com/samples/pdf.pdf";
+    String pdfUrl= "http://www.andyiac.com/pdf/problemandroid.pdf";
+    String pdfUrl2 = "http://www.pdf995.com/samples/pdf.pdf";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -75,24 +72,6 @@ public class PDFViewActivity extends AppCompatActivity {
                 .swipeVertical(true)
                 .showMinimap(false)
                 .enableSwipe(true)
-                .onPageChange(new OnPageChangeListener() {
-                    @Override
-                    public void onPageChanged(int page, int pageCount) {
-
-                    }
-                })
-                .onLoad(new OnLoadCompleteListener() {
-                    @Override
-                    public void loadComplete(int nbPages) {
-
-                    }
-                })
-                .onDraw(new OnDrawListener() {
-                    @Override
-                    public void onLayerDrawn(Canvas canvas, float pageWidth, float pageHeight, int displayedPage) {
-
-                    }
-                })
                 .load();
 
     }
