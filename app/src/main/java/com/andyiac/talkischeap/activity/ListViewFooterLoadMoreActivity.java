@@ -24,7 +24,6 @@ import java.util.List;
  * @date 2/3/16
  * @web www.andyiac.com
  * <p>
- * todo 需要优化
  */
 public class ListViewFooterLoadMoreActivity extends AppCompatActivity {
 
