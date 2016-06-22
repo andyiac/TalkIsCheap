@@ -9,3 +9,6 @@
 
 新建 NewMainActivity 里边采用 container 来显示 fragment。
 
+NewMainActivity 是个GridView 每次都是手动添加（先添加xml 在写 onClick 方法 ）
+一个包含 Title 和 content 的 Item。
+
