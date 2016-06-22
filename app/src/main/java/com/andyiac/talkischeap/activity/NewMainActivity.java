@@ -46,7 +46,8 @@ public class NewMainActivity extends BaseActivity {
         mBottomBar.mapColorForTab(0, ContextCompat.getColor(this, R.color.colorAccent));
         mBottomBar.mapColorForTab(1, 0xFF5D4037);
         mBottomBar.mapColorForTab(2, "#7B1FA2");
-        mBottomBar.mapColorForTab(3, "#FF5252");
+        mBottomBar.mapColorForTab(3, "#7B1FA2");
+
     }
 
     @Override
