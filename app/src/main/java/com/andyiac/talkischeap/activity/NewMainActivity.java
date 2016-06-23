@@ -46,7 +46,8 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
     }
 
     private void initToolbar() {
-       Toolbar toolbar = (Toolbar) findViewById(R.id.new_main_activity_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.new_main_activity_toolbar);
+        setSupportActionBar(toolbar);
     }
 
     private void initView(Bundle savedInstanceState) {
