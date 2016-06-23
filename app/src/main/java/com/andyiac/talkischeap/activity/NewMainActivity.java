@@ -2,51 +2,118 @@ package com.andyiac.talkischeap.activity;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.widget.Toast;
 
 import com.andyiac.talkischeap.BaseActivity;
 import com.andyiac.talkischeap.R;
+import com.andyiac.talkischeap.activity.tracks.FragNavController;
+import com.andyiac.talkischeap.fragment.BaseFragment;
+import com.andyiac.talkischeap.fragment.HomeFragment;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnMenuTabClickListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * andyiac
  * 16/6/22
  */
-public class NewMainActivity extends BaseActivity {
+public class NewMainActivity extends BaseActivity implements BaseFragment.FragmentNavigation {
 
 
     private BottomBar mBottomBar;
+
+    private FragNavController mNavController;
+
+    //Better convention to properly name the indices what they are in your app
+    private final int INDEX_RECENTS = FragNavController.TAB1;
+    private final int INDEX_FAVORITES = FragNavController.TAB2;
+    private final int INDEX_NEARBY = FragNavController.TAB3;
+    private final int INDEX_FRIENDS = FragNavController.TAB4;
+    private final int INDEX_FOOD = FragNavController.TAB5;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_main_activity);
 
+        initView(savedInstanceState);
+    }
+
+    private void initView(Bundle savedInstanceState) {
+
+
+        List<Fragment> fragments = new ArrayList<>(5);
+
+        fragments.add(HomeFragment.newInstance(0));
+        fragments.add(HomeFragment.newInstance(0));
+        fragments.add(HomeFragment.newInstance(0));
+        fragments.add(HomeFragment.newInstance(0));
+        fragments.add(HomeFragment.newInstance(0));
+
+        mNavController = new FragNavController(savedInstanceState, getSupportFragmentManager(), R.id.container, fragments);
+
         mBottomBar = BottomBar.attach(this, savedInstanceState);
         mBottomBar.setItems(R.menu.bottombar_menu);
         mBottomBar.setOnMenuTabClickListener(new OnMenuTabClickListener() {
             @Override
             public void onMenuTabSelected(@IdRes int menuItemId) {
-                if (menuItemId == R.id.bottomBarItemOne) {
-                    // The user selected item number one.
+
+                switch (menuItemId) {
+
+                    case R.id.bottomBarItemOne:
+                        mNavController.switchTab(INDEX_RECENTS);
+                        break;
+
+                    case R.id.bottomBarItemOne1:
+                        mNavController.switchTab(INDEX_FAVORITES);
+                        break;
+
+                    case R.id.bottomBarItemOne2:
+                        mNavController.switchTab(INDEX_NEARBY);
+                        break;
+
+                    case R.id.bottomBarItemOne3:
+                        mNavController.switchTab(INDEX_FRIENDS);
+                        break;
+
+                    case R.id.bottomBarItemOne4:
+                        mNavController.switchTab(INDEX_FOOD);
+                        break;
                 }
             }
 
             @Override
             public void onMenuTabReSelected(@IdRes int menuItemId) {
-                if (menuItemId == R.id.bottomBarItemOne) {
-                    // The user reselected item number one, scroll your content to top.
+
+                switch (menuItemId) {
+
+                    case R.id.bottomBarItemOne:
+                        Toast.makeText(NewMainActivity.this, "Home", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.bottomBarItemOne1:
+                        break;
+                    case R.id.bottomBarItemOne2:
+                        break;
+                    case R.id.bottomBarItemOne3:
+                        break;
                 }
             }
         });
 
+        /*
         // Setting colors for different tabs when there's more than three of them.
         // You can set colors for tabs in three different ways as shown below.
         mBottomBar.mapColorForTab(0, ContextCompat.getColor(this, R.color.colorAccent));
         mBottomBar.mapColorForTab(1, 0xFF5D4037);
         mBottomBar.mapColorForTab(2, "#7B1FA2");
         mBottomBar.mapColorForTab(3, "#7B1FA2");
+        */
+
 
     }
 
@@ -57,5 +124,25 @@ public class NewMainActivity extends BaseActivity {
         // Necessary to restore the BottomBar's state, otherwise we would
         // lose the current tab on orientation change.
         mBottomBar.onSaveInstanceState(outState);
+
+        mNavController.onSaveInstanceState(outState);
     }
+
+
+    @Override
+    public void onBackPressed() {
+        if (mNavController.getCurrentStack().size() > 1) {
+            mNavController.pop();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+
+    @Override
+    public void pushFragment(Fragment fragment) {
+        mNavController.push(fragment);
+    }
+
+
 }

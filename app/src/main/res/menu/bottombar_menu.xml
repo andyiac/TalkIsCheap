@@ -19,5 +19,9 @@
         android:icon="@drawable/ic_friends"
         android:title="Me" />
 
+    <item
+        android:id="@+id/bottomBarItemOne4"
+        android:icon="@drawable/ic_friends"
+        android:title="Me" />
 
 </menu>
