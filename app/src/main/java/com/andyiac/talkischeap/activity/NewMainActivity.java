@@ -42,7 +42,7 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
         setContentView(R.layout.new_main_activity);
 
         initToolbar();
-        //initView(savedInstanceState);
+        initView(savedInstanceState);
     }
 
     private void initToolbar() {
@@ -63,6 +63,8 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
         mNavController = new FragNavController(savedInstanceState, getSupportFragmentManager(), R.id.container, fragments);
 
         mBottomBar = BottomBar.attach(this, savedInstanceState);
+        mBottomBar.useOnlyStatusBarTopOffset();
+
         mBottomBar.setItems(R.menu.bottombar_menu);
         mBottomBar.setOnMenuTabClickListener(new OnMenuTabClickListener() {
             @Override
