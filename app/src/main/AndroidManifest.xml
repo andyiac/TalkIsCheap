@@ -24,9 +24,7 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity" />
 
         <activity android:name=".interact_js.SecondActivity" />
         <activity android:name=".interact_js.WebViewJsInteractActivity" />

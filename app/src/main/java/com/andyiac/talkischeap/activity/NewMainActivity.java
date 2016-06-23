@@ -42,7 +42,7 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
         setContentView(R.layout.new_main_activity);
 
         initToolbar();
-        initView(savedInstanceState);
+        //initView(savedInstanceState);
     }
 
     private void initToolbar() {
