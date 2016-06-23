@@ -47,9 +47,8 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
     private void initView(Bundle savedInstanceState) {
 
 
-        List<Fragment> fragments = new ArrayList<>(5);
+        List<Fragment> fragments = new ArrayList<>(4);
 
-        fragments.add(HomeFragment.newInstance(0));
         fragments.add(HomeFragment.newInstance(0));
         fragments.add(HomeFragment.newInstance(0));
         fragments.add(HomeFragment.newInstance(0));
@@ -80,10 +79,6 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
                     case R.id.bottomBarItemOne3:
                         mNavController.switchTab(INDEX_FRIENDS);
                         break;
-
-                    case R.id.bottomBarItemOne4:
-                        mNavController.switchTab(INDEX_FOOD);
-                        break;
                 }
             }
 
@@ -104,17 +99,6 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
                 }
             }
         });
-
-        /*
-        // Setting colors for different tabs when there's more than three of them.
-        // You can set colors for tabs in three different ways as shown below.
-        mBottomBar.mapColorForTab(0, ContextCompat.getColor(this, R.color.colorAccent));
-        mBottomBar.mapColorForTab(1, 0xFF5D4037);
-        mBottomBar.mapColorForTab(2, "#7B1FA2");
-        mBottomBar.mapColorForTab(3, "#7B1FA2");
-        */
-
-
     }
 
     @Override
