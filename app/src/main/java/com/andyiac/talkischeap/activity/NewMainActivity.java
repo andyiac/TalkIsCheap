@@ -3,7 +3,7 @@ package com.andyiac.talkischeap.activity;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.andyiac.talkischeap.BaseActivity;
@@ -41,7 +41,12 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_main_activity);
 
+        initToolbar();
         initView(savedInstanceState);
+    }
+
+    private void initToolbar() {
+       Toolbar toolbar = (Toolbar) findViewById(R.id.new_main_activity_toolbar);
     }
 
     private void initView(Bundle savedInstanceState) {
