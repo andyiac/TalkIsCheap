@@ -1,20 +1,15 @@
 package com.andyiac.talkischeap.activity;
 
 import android.content.Intent;
-import android.graphics.Canvas;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-
 import com.andyiac.talkischeap.R;
 import com.andyiac.talkischeap.utils.downloader.SimpleDownloader;
 import com.andyiac.talkischeap.utils.downloader.StorageUtils;
 import com.github.barteksc.pdfviewer.PDFView;
-import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.liulishuo.filedownloader.BaseDownloadTask;
 import com.liulishuo.filedownloader.FileDownloadListener;
 import com.liulishuo.filedownloader.FileDownloader;

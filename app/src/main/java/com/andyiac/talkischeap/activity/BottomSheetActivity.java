@@ -30,8 +30,7 @@ public class BottomSheetActivity extends AppCompatActivity {
 
     public void onClickBottomSheet(View view) {
         new BottomSheet.Builder(this)
-//                .title("  test   ")
-
+                //.title("  test   ")
                 .sheet(R.menu.bottom_sheet_activity)
                 .grid()
                 .listener(new DialogInterface.OnClickListener() {

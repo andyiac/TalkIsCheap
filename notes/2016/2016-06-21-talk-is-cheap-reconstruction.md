@@ -12,3 +12,7 @@
 NewMainActivity 是个GridView 每次都是手动添加（先添加xml 在写 onClick 方法 ）
 一个包含 Title 和 content 的 Item。
 
+
+BaseFragment 包含 Google 原生的返回键。
+
+
