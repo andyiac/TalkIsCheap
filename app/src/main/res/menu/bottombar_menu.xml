@@ -17,6 +17,6 @@
     <item
         android:id="@+id/bottomBarItemOne3"
         android:icon="@drawable/ic_friends"
-        android:title="About" />
+        android:title="Me" />
 
 </menu>

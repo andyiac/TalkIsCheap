@@ -7,16 +7,17 @@ import android.view.View;
  * andyiac
  * 16/6/23
  */
-public class HomeFragment extends BaseFragment {
+public class SavedFragment extends BaseFragment {
 
 
-    public static HomeFragment newInstance(int instance) {
+    public static SavedFragment newInstance(int instance) {
         Bundle args = new Bundle();
         args.putInt(ARGS_INSTANCE, instance);
-        HomeFragment fragment = new HomeFragment();
+        SavedFragment fragment = new SavedFragment();
         fragment.setArguments(args);
         return fragment;
     }
+
 
 
     @Override
@@ -28,7 +29,7 @@ public class HomeFragment extends BaseFragment {
                 @Override
                 public void onClick(View v) {
                     if (mFragmentNavigation != null) {
-                        mFragmentNavigation.pushFragment(HomeFragment.newInstance(mInt + 1));
+                        mFragmentNavigation.pushFragment(SavedFragment.newInstance(mInt + 1));
                     }
                 }
             });

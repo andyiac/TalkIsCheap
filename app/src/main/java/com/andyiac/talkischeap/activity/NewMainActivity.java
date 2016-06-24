@@ -11,6 +11,7 @@ import com.andyiac.talkischeap.R;
 import com.andyiac.talkischeap.activity.tracks.FragNavController;
 import com.andyiac.talkischeap.fragment.BaseFragment;
 import com.andyiac.talkischeap.fragment.HomeFragment;
+import com.andyiac.talkischeap.fragment.MeFragment;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnMenuTabClickListener;
 
@@ -58,7 +59,7 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
         fragments.add(HomeFragment.newInstance(0));
         fragments.add(HomeFragment.newInstance(0));
         fragments.add(HomeFragment.newInstance(0));
-        fragments.add(HomeFragment.newInstance(0));
+        fragments.add(MeFragment.newInstance(0));
 
         mNavController = new FragNavController(savedInstanceState, getSupportFragmentManager(), R.id.container, fragments);
 
