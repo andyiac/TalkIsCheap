@@ -22,3 +22,22 @@
 - 最开始我还是习惯直接写到一个纸质的本子上，这里的内容可以充本子上提取整理
 - 写的内容最好是学习笔记
 - 标题保持一致用英文标题
+
+
+暂时再 TalkIsCheap 中分了四个模块
+
+## Home Fragment
+
+- 记录最近的一些想法 或者是 试验性的demo
+
+## Saved Fragment
+
+- 从 Home Fragment 中按照一定分类整理出来的
+
+## Others Fragment
+
+- 其它
+
+## About Fragment
+
+- 关于
