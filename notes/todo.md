@@ -2,6 +2,7 @@
 
 
 - Home Fragment 中 GridView 设置
+- 自定义一个 ItemView 包含 Title 和 Content 放到 GridLayout 中
 
 
 - Saved Fragment 中整理之前的 demo
