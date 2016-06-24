@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
 import com.andyiac.talkischeap.R;
 import com.andyiac.talkischeap.utils.downloader.SimpleDownloader;
 import com.andyiac.talkischeap.utils.downloader.StorageUtils;
-import com.github.barteksc.pdfviewer.PDFView;
 import com.liulishuo.filedownloader.BaseDownloadTask;
 import com.liulishuo.filedownloader.FileDownloadListener;
 import com.liulishuo.filedownloader.FileDownloader;
@@ -21,11 +21,16 @@ import java.io.File;
  * @author andyiac
  * @date 2/29/16
  * @web www.andyiac.com
+ *
+ *
+ * pdf view com.github.barteksc.pdfviewer.PDFView;
+ *
+ * 由于PDF 库打包时候生成很多 so 库, 十分影响编译速度, 故暂时隐藏掉.
  */
 public class PDFViewActivity extends AppCompatActivity {
 
     private String savePath;
-    String pdfUrl= "http://www.andyiac.com/pdf/problemandroid.pdf";
+    String pdfUrl = "http://www.andyiac.com/pdf/problemandroid.pdf";
     String pdfUrl2 = "http://www.pdf995.com/samples/pdf.pdf";
 
     @Override
@@ -48,10 +53,10 @@ public class PDFViewActivity extends AppCompatActivity {
 
     }
 
-    PDFView pdfView;
+//    PDFView pdfView;
 
     private void initView() {
-        pdfView = (PDFView) findViewById(R.id.pdfview);
+        // pdfView = (PDFView) findViewById(R.id.pdfview);
 
     }
 
@@ -61,6 +66,7 @@ public class PDFViewActivity extends AppCompatActivity {
         Logger.e("========show pdf ======");
 
 
+        /*
         pdfView.fromFile(file)
                 //.pages(0, 2, 1, 3, 3, 3)
                 .defaultPage(1)
@@ -68,9 +74,9 @@ public class PDFViewActivity extends AppCompatActivity {
                 .showMinimap(false)
                 .enableSwipe(true)
                 .load();
+                */
 
     }
-
 
 
     private void testDemoDownloader() {
@@ -80,7 +86,6 @@ public class PDFViewActivity extends AppCompatActivity {
 
             @Override
             public void onDownloadFinish(final String fileAbsolutePath) {
-//                startActivity(getPdfFileIntent(fileAbsolutePath));
 
                 new Handler().postDelayed(new Runnable() {
                     @Override

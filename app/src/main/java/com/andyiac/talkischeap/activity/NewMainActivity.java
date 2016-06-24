@@ -34,6 +34,7 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
     private final int INDEX_NEARBY = FragNavController.TAB3;
     private final int INDEX_FRIENDS = FragNavController.TAB4;
     private final int INDEX_FOOD = FragNavController.TAB5;
+    private Toolbar mToolbar;
 
 
     @Override
@@ -46,12 +47,11 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
     }
 
     private void initToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.new_main_activity_toolbar);
-        setSupportActionBar(toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.new_main_activity_toolbar);
+        setSupportActionBar(mToolbar);
     }
 
     private void initView(Bundle savedInstanceState) {
-
 
         List<Fragment> fragments = new ArrayList<>(4);
 

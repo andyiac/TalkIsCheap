@@ -31,6 +31,7 @@ public class BaseFragment extends Fragment {
             mInt = args.getInt(ARGS_INSTANCE);
         }
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_base, container, false);
