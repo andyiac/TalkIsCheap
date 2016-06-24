@@ -29,21 +29,17 @@ public class MeFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Element adsElement = new Element();
-        adsElement.setTitle("Advertise with us");
 
 
         return new AboutPage(getActivity())
                 .isRTL(false)
                 .setImage(R.mipmap.login_icon1)
-                .addItem(new Element().setTitle("Version 1.1.1"))
-                .addItem(adsElement)
+                .addItem(new Element().setTitle("Version 0.5.1"))
                 .addGroup("Connect with us")
                 .addEmail("andyiaczhang@gmail.com")
-                .addWebsite("http://andyiac.com/")
+                .addWebsite("http://www.andyiac.com/")
                 .addFacebook("andyiaczhang")
                 .addTwitter("andyiaczhang")
-                .addYoutube("UCdPQtdWIsg7_pi4mrRu46vA")
                 .addPlayStore("com.andyiac")
                 .addGitHub("andyiac")
                 .addInstagram("andyiac")

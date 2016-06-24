@@ -4,8 +4,11 @@ import android.os.Bundle;
 import android.view.View;
 
 /**
- * andyiac
- * 16/6/23
+ * andyiac  16/6/23
+ *
+ * 稳定的 demo 放到这里来
+ *
+ * 适当的进行分类
  */
 public class SavedFragment extends BaseFragment {
 
@@ -17,7 +20,6 @@ public class SavedFragment extends BaseFragment {
         fragment.setArguments(args);
         return fragment;
     }
-
 
 
     @Override
