@@ -7,6 +7,9 @@ import android.webkit.WebView;
 
 import com.andyiac.talkischeap.R;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import cn.pedant.SafeWebViewBridge.InjectedChromeClient;
 
 /**
@@ -32,6 +35,15 @@ public class WebViewJsInteractActivity extends AppCompatActivity {
         ws.setJavaScriptEnabled(true);
         mWebView.setWebChromeClient(new InjectedChromeClient("XFZ_App", HostJsScope.class));
         mWebView.loadUrl("file:///android_asset/test.html");
+
+        /**
+         * 下面是添加header的测试
+         */
+//        Map<String,String> extraHeaders = new HashMap<>();
+//        extraHeaders.put("xfz","1234567890");
+//        mWebView.loadUrl("http://cms.dev.xfz.cn/api/app_page/action_records/",extraHeaders);
+
+
         //mWebView.loadUrl("http://192.168.10.54/static/js/phone/phone.article.js");
     }
 

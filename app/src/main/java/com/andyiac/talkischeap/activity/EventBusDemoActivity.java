@@ -10,6 +10,7 @@ import com.andyiac.talkischeap.R;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 /**
  * andyiac
@@ -38,6 +39,7 @@ public class EventBusDemoActivity extends AppCompatActivity {
                 user.setAge(age++ + "");
 
                 EventBus.getDefault().post(user);
+                EventBus.getDefault().postSticky(user);
 
             }
         });
@@ -49,7 +51,6 @@ public class EventBusDemoActivity extends AppCompatActivity {
         super.onResume();
         EventBus.getDefault().register(this);
     }
-
 
     @Override
     protected void onDestroy() {
@@ -85,6 +86,12 @@ public class EventBusDemoActivity extends AppCompatActivity {
                 this.age = age;
             }
         }
+    }
+
+    @Subscribe(sticky = true, threadMode = ThreadMode.MAIN,priority = 1)
+    public void onEvent() {
+
+
     }
 
 }

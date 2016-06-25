@@ -4,7 +4,6 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <!-- TODO 默认占位图 -->
 
     <com.andyiac.talkischeap.interceptor_html.ZoomableImageView
         android:id="@+id/show_webimage_imageview"

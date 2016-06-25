@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottomBarItemOne"
+        android:icon="@drawable/ic_recents"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/bottomBarItemOne1"
+        android:icon="@drawable/ic_favorites"
+        android:title="Save" />
+
+    <item
+        android:id="@+id/bottomBarItemOne2"
+        android:icon="@drawable/ic_restaurants"
+        android:title="Others" />
+    <item
+        android:id="@+id/bottomBarItemOne3"
+        android:icon="@drawable/ic_friends"
+        android:title="Me" />
+
+</menu>

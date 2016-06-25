@@ -22,6 +22,7 @@ import com.andyiac.talkischeap.activity.PopWindowTestActivity;
 import com.andyiac.talkischeap.activity.PullAndLoadMoreQiuTestActivity;
 import com.andyiac.talkischeap.activity.ScaleAnimationActivity;
 import com.andyiac.talkischeap.activity.SoftInputModeTestActivity;
+import com.andyiac.talkischeap.activity.XfzMeetingListCustomViewActivity;
 import com.andyiac.talkischeap.activity.image.cropper.ScissorsActivity;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
 import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
@@ -160,8 +161,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClickImageMemoryTest(View view ){
-       Intent intent = new Intent();
+    public void onClickImageMemoryTest(View view) {
+        Intent intent = new Intent();
         intent.setClass(MainActivity.this, ImageBitmapMemoryTestActivity.class);
         startActivity(intent);
 
@@ -179,5 +180,32 @@ public class MainActivity extends AppCompatActivity {
         intent.setClass(this, EventBusDemoActivity.class);
         startActivity(intent);
     }
+
+    public void onClickXfzMeetingListCustomView(View view) {
+
+        Intent intent = new Intent();
+        intent.setClass(this, XfzMeetingListCustomViewActivity.class);
+        startActivity(intent);
+
+
+    }
+
+
+    /**
+     * 全角半角测试
+     */
+    public void test_half_width() {
+        /*
+        // 全角 ＠
+        // 半角 @
+        String s = "ning＠xfz.cn";
+        String s2 = "ning@xfz.cn";
+
+        if(s.contains("@")){
+            Toast.makeText(MainActivity.this, "包含 全角at", Toast.LENGTH_SHORT).show();
+        }
+        */
+    }
+
 
 }

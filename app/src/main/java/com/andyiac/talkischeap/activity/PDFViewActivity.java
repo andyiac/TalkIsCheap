@@ -3,10 +3,9 @@ package com.andyiac.talkischeap.activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
 
 import com.andyiac.talkischeap.R;
 import com.andyiac.talkischeap.utils.downloader.SimpleDownloader;
@@ -22,6 +21,11 @@ import java.io.File;
  * @author andyiac
  * @date 2/29/16
  * @web www.andyiac.com
+ *
+ *
+ * pdf view com.github.barteksc.pdfviewer.PDFView;
+ *
+ * 由于PDF 库打包时候生成很多 so 库, 十分影响编译速度, 故暂时隐藏掉.
  */
 public class PDFViewActivity extends AppCompatActivity {
 
@@ -34,23 +38,64 @@ public class PDFViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pdf_view_activity);
         savePath = StorageUtils.getCacheDirectory(this).getPath();
-        //showPdf(); // todo 直接让webView 显示pdf 在国内根本不可行
+//        com.andyiac.talkischeap.utils.FileUtils fileUtils = new com.andyiac.talkischeap.utils.FileUtils(this);
+//        savePath = fileUtils.getStorageDirectory();
 
-        // downloadPdf(pdfUrl2, savePath); // 此方法savePath是绝对方法
+
+        //showPdf(); // 直接让webView 显示pdf 在国内不可行
+
+        initView();
+
+        //downloadPdf(pdfUrl2, savePath); // 此方法savePath是绝对方法
 
         testDemoDownloader();
+
+
+    }
+
+//    PDFView pdfView;
+
+    private void initView() {
+        // pdfView = (PDFView) findViewById(R.id.pdfview);
+
+    }
+
+
+    private void showPdf(File file) {
+
+        Logger.e("========show pdf ======");
+
+
+        /*
+        pdfView.fromFile(file)
+                //.pages(0, 2, 1, 3, 3, 3)
+                .defaultPage(1)
+                .swipeVertical(true)
+                .showMinimap(false)
+                .enableSwipe(true)
+                .load();
+                */
 
     }
 
 
     private void testDemoDownloader() {
-        SimpleDownloader downloader = new SimpleDownloader(this, pdfUrl, savePath, "abcdefg.pdf");
+        SimpleDownloader downloader = new SimpleDownloader(this, pdfUrl2, savePath, "bp.pdf");
         downloader.startDownload();
         downloader.setOnDownloadFinishListener(new SimpleDownloader.OnDownloadFinishListener() {
 
             @Override
-            public void onDownloadFinish(String fileAbsolutePath) {
-                startActivity(getPdfFileIntent(fileAbsolutePath));
+            public void onDownloadFinish(final String fileAbsolutePath) {
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        File pdfFile = new File(fileAbsolutePath);
+                        showPdf(pdfFile);
+
+                    }
+                }, 2000);
 
                 Logger.e("=======open file=====" + fileAbsolutePath);
             }
@@ -85,7 +130,23 @@ public class PDFViewActivity extends AppCompatActivity {
     }
 
 
+    // ==========================================================================================
+    /*
+    private void showPdf() {
+        Logger.e("=============================================================================");
+        WebView webview = (WebView) findViewById(R.id.pdf_web_view);
+
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.setWebChromeClient(new WebChromeClient());
+
+        webview.loadUrl("http://www.andyiac.com/pdf/problemandroid.pdf");
+        //webview.loadUrl("http://docs.google.com/gview?embedded=true&url=http://myurl.com/demo.pdf");
+        //webview.loadUrl("http://docs.google.com/gview?embedded=true&url="+"http://www.andyiac.com/pdf/problemandroid.pdf");
+
+    }*/
+
     private void downloadPdf(String url, String path) {
+        Logger.e("==========download pdf =======");
         FileDownloader.getImpl().create(url)
                 .setPath(path)
                 .setListener(new FileDownloadListener() {
@@ -114,7 +175,10 @@ public class PDFViewActivity extends AppCompatActivity {
                     protected void completed(BaseDownloadTask task) {
                         Logger.e("-----------download completed ------------------");
 
-                        startActivity(getPdfFileIntent(savePath));
+                        File pdfFile = new File(savePath);
+                        showPdf(pdfFile);
+
+                        //startActivity(getPdfFileIntent(savePath));
 
                     }
 
@@ -132,19 +196,5 @@ public class PDFViewActivity extends AppCompatActivity {
                 }).start();
     }
 
-
-    // ==========================================================================================
-    private void showPdf() {
-        Logger.e("=============================================================================");
-        WebView webview = (WebView) findViewById(R.id.pdf_web_view);
-
-        webview.getSettings().setJavaScriptEnabled(true);
-        webview.setWebChromeClient(new WebChromeClient());
-
-        webview.loadUrl("http://www.andyiac.com/pdf/problemandroid.pdf");
-        //webview.loadUrl("http://docs.google.com/gview?embedded=true&url=http://myurl.com/demo.pdf");
-        //webview.loadUrl("http://docs.google.com/gview?embedded=true&url="+"http://www.andyiac.com/pdf/problemandroid.pdf");
-
-    }
 
 }
