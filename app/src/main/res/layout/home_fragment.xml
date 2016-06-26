@@ -16,6 +16,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/id_home_test1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
