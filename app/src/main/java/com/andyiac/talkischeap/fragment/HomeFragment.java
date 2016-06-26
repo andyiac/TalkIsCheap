@@ -59,4 +59,5 @@ public class HomeFragment extends BaseFragment {
         unbinder.unbind();
     }
 
+
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -15,8 +16,15 @@
             android:foregroundGravity="center"
             android:orientation="horizontal">
 
-            <TextView
+
+            <com.andyiac.talkischeap.view.custom.TICItemView
                 android:id="@+id/id_home_test1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                custom:contentText="component test hope you like it "
+                custom:titleText="just for test" />
+
+            <TextView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
