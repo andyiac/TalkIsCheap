@@ -21,169 +21,25 @@
                 android:id="@+id/id_home_test1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                custom:contentText="component test hope you like it "
+                android:layout_margin="10dp"
+                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
                 custom:titleText="just for test" />
 
-            <TextView
+            <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_test2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
+                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
+                custom:titleText="just for test" />
 
-            <TextView
+            <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_test3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@android:color/holo_green_light"
-                android:gravity="center"
-                android:text="adsfasdf" />
+                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
+                custom:titleText="just for test" />
 
         </GridLayout>
 

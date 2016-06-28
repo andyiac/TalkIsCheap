@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@android:color/holo_green_light"
-    android:gravity="center"
     android:orientation="vertical">
-
 
     <TextView
         android:id="@+id/tic_item_view_title"
@@ -32,7 +30,7 @@
         android:gravity="center_vertical"
         android:maxLines="5"
         android:padding="4dp"
-        android:text="contentasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf"
+        android:text="content"
         android:textColor="@android:color/white"
         android:textSize="12sp" />
 

@@ -50,6 +50,11 @@ public class HomeFragment extends BaseFragment {
     @OnClick(R.id.id_home_test1)
     public void test() {
         Toast.makeText(getActivity(), "test click", Toast.LENGTH_SHORT).show();
+
+        if (mFragmentNavigation != null) {
+            mFragmentNavigation.pushFragment(HomeFragmentBack.newInstance(mInt + 1));
+        }
+
     }
 
 
