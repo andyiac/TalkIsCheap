@@ -1,8 +1,6 @@
 # Todos
 
 
-- todo Home Fragment 中 GridView 设置
-- todo 自定义一个 ItemView 包含 Title 和 Content 放到 GridLayout 中
 
 - todo Saved Fragment 中整理之前的 demo
 
@@ -21,5 +19,11 @@
 - todo 是否能在父类注入 butter knife 子类就不用进行次操作了
 
 
+## Bugs
 
+todo app 在小米1s 或者是部分低版本手机 个人中心页面 背景颜色不能设置
 
+## Dones
+
+- 自定义一个 ItemView 包含 Title 和 Content 放到 GridLayout 中
+- Home Fragment 中 GridView 设置
