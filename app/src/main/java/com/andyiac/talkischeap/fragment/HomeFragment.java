@@ -17,7 +17,7 @@ import butterknife.Unbinder;
  * andyiac
  * 16/6/23
  */
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseToolBarFragment {
 
 
     private Unbinder unbinder;
@@ -33,10 +33,19 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
+
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.home_fragment, container, false);
         unbinder = ButterKnife.bind(this, view);
 
+        initView(view);
         return view;
+    }
+
+    private void initView(View view) {
+
+        setToolbarDisplayHomeAsTitle(R.string.app_name);
+
     }
 
     @Override
