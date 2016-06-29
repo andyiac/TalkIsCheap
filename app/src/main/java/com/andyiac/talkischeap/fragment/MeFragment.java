@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.andyiac.talkischeap.R;
 
@@ -30,9 +31,12 @@ public class MeFragment extends BaseToolBarFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        super.onCreateView(inflater,container,savedInstanceState);
+        super.onCreateView(inflater, container, savedInstanceState);
 
-        return new AboutPage(getActivity())
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.me_fragment, container, false);
+        LinearLayout parent = (LinearLayout) view.findViewById(R.id.me_layout_parent);
+
+        View aboutPage = new AboutPage(getActivity())
                 .isRTL(false)
                 .setImage(R.mipmap.login_icon1)
                 .addItem(new Element().setTitle("Version 0.5.1"))
@@ -46,6 +50,10 @@ public class MeFragment extends BaseToolBarFragment {
                 .addInstagram("andyiac")
                 .setDescription("Talk is cheap is a personal app contains a lot of dev tricks from my personal work")
                 .create();
+
+        parent.addView(aboutPage);
+
+        return view;
     }
 
     @Override

@@ -50,7 +50,7 @@
 
         <activity
             android:name=".activity.SoftInputModeTestActivity"
-            android:windowSoftInputMode="adjustPan"></activity>
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".activity.ImageBitmapMemoryTestActivity" />
 
 
