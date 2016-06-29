@@ -22,6 +22,12 @@ public class SavedFragment extends BaseToolBarFragment {
 
 
     @Override
+    protected void initToolBarView() {
+        setToolbarDisplayHomeAsUp(false);
+        setToolbarTitle(getClass().getSimpleName());
+    }
+
+    @Override
     public void onStart() {
         super.onStart();
 

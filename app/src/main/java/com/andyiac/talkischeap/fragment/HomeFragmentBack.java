@@ -36,6 +36,15 @@ public class HomeFragmentBack extends BaseToolBarFragment {
     }
 
     @Override
+    protected void initToolBarView() {
+
+        setToolbarDisplayHomeAsUp(true);
+
+        String title = getClass().getSimpleName() + " " + mInt;
+        setToolbarTitle(title);
+    }
+
+    @Override
     public void onStart() {
         super.onStart();
 
@@ -51,8 +60,6 @@ public class HomeFragmentBack extends BaseToolBarFragment {
             mButton.setText(getClass().getSimpleName() + " " + mInt);
         }
 
-        setToolbarDisplayHomeAsTitle(getClass().getSimpleName() + " " + mInt);
-        setToolbarDisplayHomeAsUpWithTitle(getClass().getSimpleName() + " " + mInt);
 
     }
 

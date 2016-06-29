@@ -17,6 +17,8 @@ import com.andyiac.talkischeap.activity.tracks.FragNavController;
 import com.andyiac.talkischeap.fragment.BaseFragment;
 import com.andyiac.talkischeap.fragment.HomeFragment;
 import com.andyiac.talkischeap.fragment.MeFragment;
+import com.andyiac.talkischeap.fragment.OthersFragment;
+import com.andyiac.talkischeap.fragment.SavedFragment;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnMenuTabClickListener;
 
@@ -76,8 +78,10 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
 
         setSupportActionBar(mToolbar);
 
+        this.mActionBar = getSupportActionBar();
         this.mActionBarHelper = this.createActionBarHelper();
         this.mActionBarHelper.init();
+
         if (Build.VERSION.SDK_INT >= 21) {
             this.mAppBarLayout.setElevation(6.6f);
         }
@@ -89,8 +93,8 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
         List<Fragment> fragments = new ArrayList<>(4);
 
         fragments.add(HomeFragment.newInstance(0));
-        fragments.add(HomeFragment.newInstance(0));
-        fragments.add(HomeFragment.newInstance(0));
+        fragments.add(SavedFragment.newInstance(0));
+        fragments.add(OthersFragment.newInstance(0));
         fragments.add(MeFragment.newInstance(0));
 
         mNavController = new FragNavController(savedInstanceState, getSupportFragmentManager(), R.id.container, fragments);
@@ -180,12 +184,13 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
     }
 
 
-    public void showBack() {
-        if (this.mActionBarHelper != null) this.mActionBarHelper.setDisplayHomeAsUpEnabled(true);
+    public void showBack(boolean back) {
+        if (this.mActionBarHelper != null) this.mActionBarHelper.setDisplayHomeAsUpEnabled(back);
     }
 
     public void setToolBarTitle(String title) {
-        this.setTitle(title);
+        //this.setTitle(title); ?????? activity 中的 mTitle
+        mActionBar.setTitle(title);
     }
 
     /**

@@ -30,7 +30,6 @@ public class MeFragment extends BaseToolBarFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        setToolbarDisplayHomeAsTitle("About me fragment");
 
         return new AboutPage(getActivity())
                 .isRTL(false)
@@ -46,6 +45,13 @@ public class MeFragment extends BaseToolBarFragment {
                 .addInstagram("andyiac")
                 .setDescription("Talk is cheap is a personal app contains a lot of dev tricks from my personal work")
                 .create();
+    }
+
+    @Override
+    protected void initToolBarView() {
+
+        setToolbarDisplayHomeAsUp(false);
+        setToolbarTitle(getClass().getSimpleName());
     }
 
     @Override
