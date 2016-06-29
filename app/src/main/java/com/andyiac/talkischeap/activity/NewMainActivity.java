@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.andyiac.talkischeap.BaseActivity;
@@ -49,7 +51,16 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
 
     private void initToolbar() {
         mToolbar = (Toolbar) findViewById(R.id.new_main_activity_toolbar);
+
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     private void initView(Bundle savedInstanceState) {
@@ -137,5 +148,14 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
         mNavController.push(fragment);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 }

@@ -59,7 +59,7 @@ public class BaseToolBarFragment extends BaseFragment {
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
     }
 
-    public void onToolbarBackClick() {
-        //((AppCompatActivity)getActivity()).getSupportActionBar().setde
-    }
+
+
+
 }
