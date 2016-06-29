@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.andyiac.talkischeap.R;
+import com.andyiac.talkischeap.activity.NewMainActivity;
 
 /**
  * andyiac
@@ -45,26 +46,23 @@ public class BaseToolBarFragment extends BaseFragment {
 
 
     public void setToolbarDisplayHomeAsUp() {
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP);
+        ((NewMainActivity) getActivity()).showBack();
     }
 
     public void setToolbarDisplayHomeAsUpWithTitle(String title) {
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP);
-
+        ((NewMainActivity) getActivity()).showBack();
+        ((NewMainActivity) getActivity()).setToolBarTitle(title);
     }
 
     public void setToolbarDisplayHomeAsTitle(int title) {
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
-
     }
 
     public void setToolbarDisplayHomeAsTitle(String title) {
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
     }
-
 
 
 }

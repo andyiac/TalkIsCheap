@@ -38,6 +38,8 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
 
     protected ActionBarHelper mActionBarHelper;
 
+    private ActionBar mActionBar;
+
     //Better convention to properly name the indices what they are in your app
     private final int INDEX_RECENTS = FragNavController.TAB1;
     private final int INDEX_FAVORITES = FragNavController.TAB2;
@@ -73,7 +75,6 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
         });
 
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         this.mActionBarHelper = this.createActionBarHelper();
         this.mActionBarHelper.init();
@@ -179,22 +180,13 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
     }
 
 
-    /**
-     * init the toolbar
-     */
-    protected void initToolbarHelper() {
-        if (this.mToolbar == null || this.mAppBarLayout == null) return;
-
-        this.setSupportActionBar(this.mToolbar);
-
-        this.mActionBarHelper = this.createActionBarHelper();
-        this.mActionBarHelper.init();
-
-        if (Build.VERSION.SDK_INT >= 21) {
-            this.mAppBarLayout.setElevation(6.6f);
-        }
+    public void showBack() {
+        if (this.mActionBarHelper != null) this.mActionBarHelper.setDisplayHomeAsUpEnabled(true);
     }
 
+    public void setToolBarTitle(String title) {
+        this.setTitle(title);
+    }
 
     /**
      * Create a compatible helper that will manipulate the action bar if available.

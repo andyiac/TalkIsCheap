@@ -43,9 +43,7 @@ public class HomeFragment extends BaseToolBarFragment {
     }
 
     private void initView(View view) {
-
         setToolbarDisplayHomeAsTitle(R.string.app_name);
-
     }
 
     @Override

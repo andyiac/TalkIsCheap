@@ -30,7 +30,6 @@ public class HomeFragmentBack extends BaseToolBarFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.home_fragment_back_test, container, false);
         mButton = (Button) view.findViewById(R.id.button);
         return view;
@@ -52,6 +51,7 @@ public class HomeFragmentBack extends BaseToolBarFragment {
             mButton.setText(getClass().getSimpleName() + " " + mInt);
         }
 
+        setToolbarDisplayHomeAsTitle(getClass().getSimpleName() + " " + mInt);
         setToolbarDisplayHomeAsUpWithTitle(getClass().getSimpleName() + " " + mInt);
 
     }
