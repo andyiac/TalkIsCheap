@@ -13,15 +13,15 @@ import com.andyiac.talkischeap.R;
  * andyiac
  * 16/6/23
  */
-public class HomeFragmentBack extends BaseToolBarFragment {
+public class BackStackTestFragment extends BaseToolBarFragment {
 
 
     Button mButton;
 
-    public static HomeFragmentBack newInstance(int instance) {
+    public static BackStackTestFragment newInstance(int instance) {
         Bundle args = new Bundle();
         args.putInt(ARGS_INSTANCE, instance);
-        HomeFragmentBack fragment = new HomeFragmentBack();
+        BackStackTestFragment fragment = new BackStackTestFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -53,7 +53,7 @@ public class HomeFragmentBack extends BaseToolBarFragment {
                 @Override
                 public void onClick(View v) {
                     if (mFragmentNavigation != null) {
-                        mFragmentNavigation.pushFragment(HomeFragmentBack.newInstance(mInt + 1));
+                        mFragmentNavigation.pushFragment(BackStackTestFragment.newInstance(mInt + 1));
                     }
                 }
             });

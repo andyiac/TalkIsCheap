@@ -67,7 +67,7 @@ public class HomeFragment extends BaseToolBarFragment {
         Toast.makeText(getActivity(), "test click", Toast.LENGTH_SHORT).show();
 
         if (mFragmentNavigation != null) {
-            mFragmentNavigation.pushFragment(HomeFragmentBack.newInstance(mInt + 1));
+            mFragmentNavigation.pushFragment(BackStackTestFragment.newInstance(mInt + 1));
         }
 
     }
