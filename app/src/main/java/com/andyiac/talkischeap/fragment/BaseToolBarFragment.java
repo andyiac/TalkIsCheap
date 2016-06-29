@@ -2,8 +2,8 @@ package com.andyiac.talkischeap.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +17,6 @@ import com.andyiac.talkischeap.R;
 public class BaseToolBarFragment extends BaseFragment {
 
 
-    private Toolbar mToolbar;
 
 
     @Override
@@ -30,9 +29,6 @@ public class BaseToolBarFragment extends BaseFragment {
 
     private void initView(View view) {
 
-        mToolbar = (Toolbar) view.findViewById(R.id.base_fragment_toolbar);
-
-        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
 
     }
 
@@ -51,13 +47,12 @@ public class BaseToolBarFragment extends BaseFragment {
 
 
     public void setToolbarDisplayHomeAsUp() {
-        //((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(android.support.v7.app.ActionBar.DISPLAY_HOME_AS_UP);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(android.support.v7.app.ActionBar.DISPLAY_HOME_AS_UP);
     }
 
     public void setToolbarDisplayHomeAsTitle(int title) {
-        mToolbar.setTitle(title);
-//        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
-//        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
 
     }
 }

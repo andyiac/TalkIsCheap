@@ -2,6 +2,7 @@ package com.andyiac.talkischeap.fragment;
 
 import android.app.ActionBar;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 /**
@@ -37,7 +38,7 @@ public class HomeFragmentBack extends BaseFragment {
         }
 
 
-        getActivity().getActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP);
 
     }
 
