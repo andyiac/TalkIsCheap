@@ -1,8 +1,11 @@
 package com.andyiac.talkischeap.activity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,6 +34,10 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
 
     private FragNavController mNavController;
 
+    protected AppBarLayout mAppBarLayout;
+
+    protected ActionBarHelper mActionBarHelper;
+
     //Better convention to properly name the indices what they are in your app
     private final int INDEX_RECENTS = FragNavController.TAB1;
     private final int INDEX_FAVORITES = FragNavController.TAB2;
@@ -49,8 +56,14 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
         initView(savedInstanceState);
     }
 
+    /**
+     * init the toolbar
+     */
     private void initToolbar() {
         mToolbar = (Toolbar) findViewById(R.id.new_main_activity_toolbar);
+        mAppBarLayout = (AppBarLayout) findViewById(R.id.new_main_activity_app_bar_layout);
+
+        if (this.mToolbar == null || this.mAppBarLayout == null) return;
 
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +74,14 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        this.mActionBarHelper = this.createActionBarHelper();
+        this.mActionBarHelper.init();
+        if (Build.VERSION.SDK_INT >= 21) {
+            this.mAppBarLayout.setElevation(6.6f);
+        }
     }
+
 
     private void initView(Bundle savedInstanceState) {
 
@@ -156,6 +176,79 @@ public class NewMainActivity extends BaseActivity implements BaseFragment.Fragme
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    /**
+     * init the toolbar
+     */
+    protected void initToolbarHelper() {
+        if (this.mToolbar == null || this.mAppBarLayout == null) return;
+
+        this.setSupportActionBar(this.mToolbar);
+
+        this.mActionBarHelper = this.createActionBarHelper();
+        this.mActionBarHelper.init();
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            this.mAppBarLayout.setElevation(6.6f);
+        }
+    }
+
+
+    /**
+     * Create a compatible helper that will manipulate the action bar if available.
+     */
+    public ActionBarHelper createActionBarHelper() {
+        return new ActionBarHelper();
+    }
+
+
+    public class ActionBarHelper {
+        private final ActionBar mActionBar;
+        public CharSequence mDrawerTitle;
+        public CharSequence mTitle;
+
+
+        public ActionBarHelper() {
+            this.mActionBar = getSupportActionBar();
+        }
+
+
+        public void init() {
+            if (this.mActionBar == null) return;
+            this.mActionBar.setDisplayHomeAsUpEnabled(true);
+            this.mActionBar.setDisplayShowHomeEnabled(false);
+            this.mTitle = mDrawerTitle = getTitle();
+        }
+
+
+        public void onDrawerClosed() {
+            if (this.mActionBar == null) return;
+            this.mActionBar.setTitle(this.mTitle);
+        }
+
+
+        public void onDrawerOpened() {
+            if (this.mActionBar == null) return;
+            this.mActionBar.setTitle(this.mDrawerTitle);
+        }
+
+
+        public void setTitle(CharSequence title) {
+            this.mTitle = title;
+        }
+
+
+        public void setDrawerTitle(CharSequence drawerTitle) {
+            this.mDrawerTitle = drawerTitle;
+        }
+
+
+        public void setDisplayHomeAsUpEnabled(boolean showHomeAsUp) {
+            if (this.mActionBar == null) return;
+            this.mActionBar.setDisplayHomeAsUpEnabled(showHomeAsUp);
+        }
     }
 
 }
