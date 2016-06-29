@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.andyiac.talkischeap.R;
 
@@ -19,7 +18,6 @@ public class BaseFragment extends Fragment {
 
     public static final String ARGS_INSTANCE = "com.andyiac.talkischeap.argsInstance";
 
-    Button mButton;
     FragmentNavigation mFragmentNavigation;
     int mInt = 0;
 
@@ -35,7 +33,6 @@ public class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_base, container, false);
-        mButton = (Button) view.findViewById(R.id.button);
         return view;
     }
 

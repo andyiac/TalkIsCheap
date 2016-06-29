@@ -1,13 +1,12 @@
 package com.andyiac.talkischeap.fragment;
 
 import android.os.Bundle;
-import android.view.View;
 
 /**
  * andyiac
  * 16/6/23
  */
-public class OthersFragment extends BaseFragment {
+public class OthersFragment extends BaseToolBarFragment {
 
 
     public static OthersFragment newInstance(int instance) {
@@ -19,22 +18,9 @@ public class OthersFragment extends BaseFragment {
     }
 
 
-
     @Override
     public void onStart() {
         super.onStart();
-
-        if (mButton != null) {
-            mButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mFragmentNavigation != null) {
-                        mFragmentNavigation.pushFragment(OthersFragment.newInstance(mInt + 1));
-                    }
-                }
-            });
-            mButton.setText(getClass().getSimpleName() + " " + mInt);
-        }
 
     }
 

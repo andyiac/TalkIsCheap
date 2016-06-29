@@ -45,7 +45,13 @@ public class BaseToolBarFragment extends BaseFragment {
 
 
     public void setToolbarDisplayHomeAsUp() {
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(android.support.v7.app.ActionBar.DISPLAY_HOME_AS_UP);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP);
+    }
+
+    public void setToolbarDisplayHomeAsUpWithTitle(String title) {
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP);
+
     }
 
     public void setToolbarDisplayHomeAsTitle(int title) {
@@ -58,8 +64,6 @@ public class BaseToolBarFragment extends BaseFragment {
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
     }
-
-
 
 
 }

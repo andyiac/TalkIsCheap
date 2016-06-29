@@ -1,15 +1,22 @@
 package com.andyiac.talkischeap.fragment;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.andyiac.talkischeap.R;
 
 /**
  * andyiac
  * 16/6/23
  */
-public class HomeFragmentBack extends BaseFragment {
+public class HomeFragmentBack extends BaseToolBarFragment {
 
+
+    Button mButton;
 
     public static HomeFragmentBack newInstance(int instance) {
         Bundle args = new Bundle();
@@ -19,6 +26,15 @@ public class HomeFragmentBack extends BaseFragment {
         return fragment;
     }
 
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
+
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.home_fragment_back_test, container, false);
+        mButton = (Button) view.findViewById(R.id.button);
+        return view;
+    }
 
     @Override
     public void onStart() {
@@ -36,11 +52,7 @@ public class HomeFragmentBack extends BaseFragment {
             mButton.setText(getClass().getSimpleName() + " " + mInt);
         }
 
-
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(android.support.v7.app.ActionBar.DISPLAY_HOME_AS_UP);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(android.support.v7.app.ActionBar.DISPLAY_HOME_AS_UP);
-
-
+        setToolbarDisplayHomeAsUpWithTitle(getClass().getSimpleName() + " " + mInt);
 
     }
 

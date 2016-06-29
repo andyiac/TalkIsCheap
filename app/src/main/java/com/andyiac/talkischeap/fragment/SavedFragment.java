@@ -1,16 +1,15 @@
 package com.andyiac.talkischeap.fragment;
 
 import android.os.Bundle;
-import android.view.View;
 
 /**
  * andyiac  16/6/23
- *
+ * <p>
  * 稳定的 demo 放到这里来
- *
+ * <p>
  * 适当的进行分类
  */
-public class SavedFragment extends BaseFragment {
+public class SavedFragment extends BaseToolBarFragment {
 
 
     public static SavedFragment newInstance(int instance) {
@@ -26,17 +25,6 @@ public class SavedFragment extends BaseFragment {
     public void onStart() {
         super.onStart();
 
-        if (mButton != null) {
-            mButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mFragmentNavigation != null) {
-                        mFragmentNavigation.pushFragment(SavedFragment.newInstance(mInt + 1));
-                    }
-                }
-            });
-            mButton.setText(getClass().getSimpleName() + " " + mInt);
-        }
 
     }
 
