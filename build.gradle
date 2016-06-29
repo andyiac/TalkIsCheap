@@ -28,3 +28,14 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+// ijkplayer-java module
+ext {
+    compileSdkVersion = 23
+    buildToolsVersion = "23.0.3"
+
+    targetSdkVersion = 23
+
+    versionCode = 501000
+    versionName = "0.5.1"
+}
