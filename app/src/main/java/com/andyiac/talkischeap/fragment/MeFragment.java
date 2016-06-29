@@ -30,6 +30,7 @@ public class MeFragment extends BaseToolBarFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+        super.onCreateView(inflater,container,savedInstanceState);
 
         return new AboutPage(getActivity())
                 .isRTL(false)
@@ -52,6 +53,7 @@ public class MeFragment extends BaseToolBarFragment {
 
         setToolbarDisplayHomeAsUp(false);
         setToolbarTitle(getClass().getSimpleName());
+
     }
 
     @Override
