@@ -15,7 +15,7 @@ import mehdi.sakout.aboutpage.Element;
  * andyiac
  * 16/6/23
  */
-public class MeFragment extends BaseFragment {
+public class MeFragment extends BaseToolBarFragment {
 
 
     public static MeFragment newInstance(int instance) {
@@ -30,6 +30,7 @@ public class MeFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+        setToolbarDisplayHomeAsTitle("About me fragment");
 
         return new AboutPage(getActivity())
                 .isRTL(false)

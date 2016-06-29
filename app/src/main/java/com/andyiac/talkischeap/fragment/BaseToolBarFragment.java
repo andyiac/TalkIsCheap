@@ -17,8 +17,6 @@ import com.andyiac.talkischeap.R;
 public class BaseToolBarFragment extends BaseFragment {
 
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
@@ -54,5 +52,14 @@ public class BaseToolBarFragment extends BaseFragment {
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
 
+    }
+
+    public void setToolbarDisplayHomeAsTitle(String title) {
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
+    }
+
+    public void onToolbarBackClick() {
+        //((AppCompatActivity)getActivity()).getSupportActionBar().setde
     }
 }
