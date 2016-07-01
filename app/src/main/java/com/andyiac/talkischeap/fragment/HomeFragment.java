@@ -77,7 +77,7 @@ public class HomeFragment extends BaseToolBarFragment {
     public void testIjkPlayer() {
 
         if (mFragmentNavigation != null) {
-            //mFragmentNavigation.pushFragment(new IjkPlayerTestFragment());
+            // mFragmentNavigation.pushFragment(new IjkPlayerTestFragment());
             mFragmentNavigation.pushFragment(new SampleMediaListFragment());
         }
 
