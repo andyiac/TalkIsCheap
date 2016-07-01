@@ -4,4 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+    <com.andyiac.talkischeap.ijkplayer.widget.media.IjkVideoView
+        android:id="@+id/ijk_player_fragment_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="180dp" />
+
+    <Button
+        android:id="@+id/ikj_player_fragment_play_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="play" />
+
 </LinearLayout>

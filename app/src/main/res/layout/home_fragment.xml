@@ -26,8 +26,8 @@
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="fragment stack, fragment push and pop test"
+                custom:titleText="stack test" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
                 android:id="@+id/id_home_test_ijkplayer"
@@ -35,7 +35,16 @@
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="test Bilibili ijkplayer project to play with rtmp live stream"
+                custom:contentText="test Bilibili ijkplayer project to play with rtmp live stream (play list)"
+                custom:titleText="ijkplayer" />
+
+            <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_test_ijkplayer2"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                custom:contentText="ijkplayer with custom view"
                 custom:titleText="ijkplayer" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView

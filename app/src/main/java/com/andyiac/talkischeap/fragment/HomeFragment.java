@@ -83,6 +83,16 @@ public class HomeFragment extends BaseToolBarFragment {
 
     }
 
+
+    @OnClick(R.id.id_home_test_ijkplayer2)
+    public void testIjkPlayer2() {
+
+        if (mFragmentNavigation != null) {
+            mFragmentNavigation.pushFragment(new IjkPlayerTestFragment());
+        }
+
+    }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
