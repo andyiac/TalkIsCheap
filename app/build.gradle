@@ -27,7 +27,7 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile rootProject.ext.dependencies["junit"]
     compile rootProject.ext.dependencies["appcompat-v7"]
     compile rootProject.ext.dependencies["design"]
@@ -38,36 +38,24 @@ dependencies {
     compile rootProject.ext.dependencies["retrofit"]
     compile rootProject.ext.dependencies["okhttp"]
     compile rootProject.ext.dependencies["okhttp-urlconnection"]
-
     compile rootProject.ext.dependencies["universal-image-loader"]
     compile 'com.squareup.picasso:picasso:2.5.2'
-
-
     compile 'in.srain.cube:ultra-ptr:1.0.11'
     compile 'com.cocosw:bottomsheet:1.+@aar'
-
     compile 'com.bigkoo:alertview:1.0.1'
-
     // compile 'cn.aigestudio.downloader:Downloader:1.4.3'
     compile 'com.liulishuo.filedownloader:library:0.2.0'
-
     compile 'com.lyft:scissors:1.1.0'
     compile 'com.mcxiaoke.volley:library:1.0.6'
-
-
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.nineoldandroids:library:2.4.0'
-
     // pdf   这货太影响编译速度 所以先隐藏掉了
+
     //compile 'com.github.barteksc:android-pdf-viewer:1.0.0'
-
     compile 'com.roughike:bottom-bar:1.3.9'
-
     compile 'com.github.medyo:android-about-page:1.0.8'
-
-
     compile 'com.jakewharton:butterknife:8.1.0'
     apt 'com.jakewharton:butterknife-compiler:8.1.0'
-
-
+    compile project(path: ':ijkplayer-example')
+    compile project(path: ':ijkplayer-java')
 }
