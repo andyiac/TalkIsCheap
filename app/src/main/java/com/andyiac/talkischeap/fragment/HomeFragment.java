@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.andyiac.talkischeap.R;
+import com.andyiac.talkischeap.ijkplayer.fragments.SampleMediaListFragment;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -68,6 +69,16 @@ public class HomeFragment extends BaseToolBarFragment {
 
         if (mFragmentNavigation != null) {
             mFragmentNavigation.pushFragment(BackStackTestFragment.newInstance(mInt + 1));
+        }
+
+    }
+
+    @OnClick(R.id.id_home_test_ijkplayer)
+    public void testIjkPlayer() {
+
+        if (mFragmentNavigation != null) {
+            //mFragmentNavigation.pushFragment(new IjkPlayerTestFragment());
+            mFragmentNavigation.pushFragment(new SampleMediaListFragment());
         }
 
     }
