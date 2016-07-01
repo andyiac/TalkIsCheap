@@ -16,7 +16,7 @@
             android:id="@+id/video_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center" />
+            android:layout_gravity="center|top" />
 
         <TextView
             android:id="@+id/toast_text_view"

@@ -28,7 +28,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.andyiac.talkischeap.R;
-import com.andyiac.talkischeap.ijkplayer.activities.SampleMediaActivity;
 
 @SuppressLint("Registered")
 public class AppActivity extends AppCompatActivity {
@@ -83,12 +82,12 @@ public class AppActivity extends AppCompatActivity {
             SettingsActivity.intentTo(this);
             return true;
         } else
-         */
 
         if (id == R.id.action_sample) {
             SampleMediaActivity.intentTo(this);
         }
 
+         */
         return super.onOptionsItemSelected(item);
     }
 
