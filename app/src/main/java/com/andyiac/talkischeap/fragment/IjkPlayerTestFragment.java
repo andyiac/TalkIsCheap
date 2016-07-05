@@ -50,12 +50,12 @@ public class IjkPlayerTestFragment extends BaseToolBarFragment {
         Toast.makeText(getActivity(), "play video", Toast.LENGTH_SHORT).show();
         String url = "rtmp://live.hkstv.hk.lxdns.com/live/hks";
         String url2 = "http://vediopool.kssws.ks-cdn.com/record/live/1467091190196025/hls/1467091190196025.m3u8";
+        String url3 = "rtmp://live.hkstv.hk.lxdns.com/live/hks";
         String name = "test";
 
-        mVideoView.setVideoURI(Uri.parse(url2));
+        mVideoView.setVideoURI(Uri.parse(url3));
         mVideoView.start();
     }
-
 
     @Override
     public void onDestroyView() {

@@ -44,7 +44,7 @@
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="ijkplayer with custom view"
+                custom:contentText="IjkPlayerTestFragment \n ijkplayer with custom view"
                 custom:titleText="ijkplayer" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
