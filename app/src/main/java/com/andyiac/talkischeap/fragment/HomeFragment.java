@@ -1,5 +1,8 @@
 package com.andyiac.talkischeap.fragment;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.BatteryManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -8,6 +11,22 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.andyiac.talkischeap.R;
+import com.andyiac.talkischeap.activity.BottomSheetActivity;
+import com.andyiac.talkischeap.activity.EventBusDemoActivity;
+import com.andyiac.talkischeap.activity.FadingTitleBarActivity;
+import com.andyiac.talkischeap.activity.HorizontalRecyclerViewActivity;
+import com.andyiac.talkischeap.activity.ImageBitmapMemoryTestActivity;
+import com.andyiac.talkischeap.activity.ListViewFooterLoadMoreActivity;
+import com.andyiac.talkischeap.activity.OverScrollActivity;
+import com.andyiac.talkischeap.activity.PDFViewActivity;
+import com.andyiac.talkischeap.activity.PopWindowTestActivity;
+import com.andyiac.talkischeap.activity.PullAndLoadMoreQiuTestActivity;
+import com.andyiac.talkischeap.activity.ScaleAnimationActivity;
+import com.andyiac.talkischeap.activity.SoftInputModeTestActivity;
+import com.andyiac.talkischeap.activity.XfzMeetingListCustomViewActivity;
+import com.andyiac.talkischeap.activity.image.cropper.ScissorsActivity;
+import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
+import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -19,7 +38,6 @@ import butterknife.Unbinder;
  */
 public class HomeFragment extends BaseToolBarFragment {
 
-
     private Unbinder unbinder;
 
     public static HomeFragment newInstance(int instance) {
@@ -29,7 +47,6 @@ public class HomeFragment extends BaseToolBarFragment {
         fragment.setArguments(args);
         return fragment;
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -43,24 +60,24 @@ public class HomeFragment extends BaseToolBarFragment {
     }
 
     private void initView(View view) {
-
     }
 
     @Override
     protected void initToolBarView() {
-
         setToolbarDisplayHomeAsUp(false);
         setToolbarTitle(getResources().getString(R.string.app_name));
-
     }
 
     @Override
     public void onStart() {
-
         super.onStart();
-
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
 
     @OnClick(R.id.id_home_test1)
     public void test() {
@@ -72,10 +89,142 @@ public class HomeFragment extends BaseToolBarFragment {
 
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
+
+    @OnClick(R.id.id_home_web_view_js_interface)
+    public void onClickWebViewJsInteracts(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), WebViewJsInteractActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickAndroidInterceptorHtmlActivity(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), AndroidInterceptorHtmlActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickGetPackageInfo(View view) {
+        Toast.makeText(getActivity(), getActivity().getPackageName(), Toast.LENGTH_SHORT).show();
+    }
+
+    // Test over scroll view
+    public void onClickOverScrollActivity(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), OverScrollActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickPopWindow(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), PopWindowTestActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickRecyclerView(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), HorizontalRecyclerViewActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void onClickRefreshView(View view) {
+//        Intent intent = new Intent();
+//        intent.setClass(this, PullAndLoadMoreActivity.class);
+//        startActivity(intent);
+    }
+
+    public void onClickRefreshQiuDaView(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), PullAndLoadMoreQiuTestActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickLoadMore(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), ListViewFooterLoadMoreActivity.class);
+        startActivity(intent);
+
+    }
+
+
+    public void onClickBatteryManager(View view) {
+        BatteryManager bm = (BatteryManager) getActivity().getSystemService(Activity.BATTERY_SERVICE);
+//        bm.isCharging();
+//        Toast.makeText(this, bm.isCharging() + "", Toast.LENGTH_SHORT).show();
+//        int status = bm.getIntProperty(Integer.MIN_VALUE);
+
+    }
+
+    public void onClickFadingTitleBar(View view) {
+        Intent intent = new Intent(getActivity(), FadingTitleBarActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickBottomSheet(View view) {
+        Intent intent = new Intent(getActivity(), BottomSheetActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void onClickViewPdf(View view) {
+        Intent intent = new Intent(getActivity(), PDFViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickTestAnimation(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), ScaleAnimationActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickScissors(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), ScissorsActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickImageMemoryTest(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), ImageBitmapMemoryTestActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void onClickLinearLayoutSoftInputTest(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), SoftInputModeTestActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void onClickEventBusDemo(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), EventBusDemoActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickXfzMeetingListCustomView(View view) {
+
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), XfzMeetingListCustomViewActivity.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     * 全角半角测试
+     */
+    public void test_half_width() {
+        /*
+        // 全角 ＠
+        // 半角 @
+        String s = "ning＠xfz.cn";
+        String s2 = "ning@xfz.cn";
+
+        if(s.contains("@")){
+            Toast.makeText(MainActivity.this, "包含 全角at", Toast.LENGTH_SHORT).show();
+        }
+        */
     }
 
 

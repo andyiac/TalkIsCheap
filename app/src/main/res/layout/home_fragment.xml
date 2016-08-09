@@ -26,8 +26,8 @@
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="fragment stack view"
+                custom:titleText="fragment stack view" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
                 android:id="@+id/id_home_test2"
@@ -39,11 +39,12 @@
                 custom:titleText="just for test" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_web_view_js_interface"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
+                custom:contentText=" onClickWebViewJsInteracts"
                 custom:titleText="just for test" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
