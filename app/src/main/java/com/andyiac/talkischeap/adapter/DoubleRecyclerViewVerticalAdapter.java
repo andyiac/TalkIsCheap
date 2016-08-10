@@ -57,6 +57,8 @@ public class DoubleRecyclerViewVerticalAdapter extends RecyclerView.Adapter<Doub
 
         holder.horizontalRecyclerView.setAdapter(horizontalAdapter);
 
+        holder.titleBtn.setText(position + "");
+
         holder.titleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
