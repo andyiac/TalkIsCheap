@@ -194,6 +194,16 @@
                 custom:contentText="custom list view"
                 custom:titleText="custom list view" />
 
+
+
+            <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_double_list_view"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                custom:contentText="double list view"
+                custom:titleText="double list view" />
         </GridLayout>
 
     </LinearLayout>

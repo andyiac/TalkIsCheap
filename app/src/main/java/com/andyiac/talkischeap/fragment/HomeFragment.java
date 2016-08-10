@@ -91,7 +91,7 @@ public class HomeFragment extends BaseToolBarFragment {
 
 
     @OnClick(R.id.id_home_web_view_js_interface)
-    public void onClickWebViewJsInteracts(View view) {
+    public void onClickWebViewJsInteracts() {
         Intent intent = new Intent();
         intent.setClass(getActivity(), WebViewJsInteractActivity.class);
         startActivity(intent);
@@ -244,5 +244,12 @@ public class HomeFragment extends BaseToolBarFragment {
         */
     }
 
+    @OnClick(R.id.id_home_double_list_view)
+    public void testDoubleListView() {
+        if (mFragmentNavigation != null) {
+            mFragmentNavigation.pushFragment(new DoubleListViewFragment());
+        }
+
+    }
 
 }
