@@ -2,12 +2,16 @@ package com.andyiac.talkischeap.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.andyiac.talkischeap.R;
+import com.andyiac.talkischeap.adapter.DoubleRecyclerViewVerticalAdapter;
+
+import java.util.Arrays;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,8 +24,8 @@ import butterknife.ButterKnife;
 public class DoubleListViewFragment extends BaseToolBarFragment {
 
 
-    @BindView(R.id.double_list_rv_1)
-    RecyclerView mRecyclerViewHorizental;
+    @BindView(R.id.double_list_rv_vertical)
+    RecyclerView mRecyclerViewVertical;
 
     //@BindView(R.id.double_list_rv_2) RecyclerView mRecyclerViewVertical;
 
@@ -45,6 +49,20 @@ public class DoubleListViewFragment extends BaseToolBarFragment {
 
     private void initView(View view) {
         ButterKnife.bind(this, view);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+
+        mRecyclerViewVertical.setLayoutManager(layoutManager);
+
+        String[] data = new String[100];
+        for (int i = 0; i < data.length; i++) {
+            data[i] = "item " + i;
+        }
+
+        DoubleRecyclerViewVerticalAdapter verticalAdapter = new DoubleRecyclerViewVerticalAdapter(Arrays.asList(data));
+        mRecyclerViewVertical.setAdapter(verticalAdapter);
+
     }
 
 }
