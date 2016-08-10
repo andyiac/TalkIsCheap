@@ -5,6 +5,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.andyiac.talkischeap.R;
 
@@ -37,7 +39,7 @@ public class DoubleRecyclerViewVerticalAdapter extends RecyclerView.Adapter<Doub
     }
 
     @Override
-    public void onBindViewHolder(MyHolder holder, int position) {
+    public void onBindViewHolder(final MyHolder holder, int position) {
 
         //holder.mTextView.setText(mData.get(position));
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
@@ -54,6 +56,13 @@ public class DoubleRecyclerViewVerticalAdapter extends RecyclerView.Adapter<Doub
                 DoubleRecyclerViewHorizontalAdapter(Arrays.asList(data));
 
         holder.horizontalRecyclerView.setAdapter(horizontalAdapter);
+
+        holder.titleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, holder.titleBtn.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -66,10 +75,12 @@ public class DoubleRecyclerViewVerticalAdapter extends RecyclerView.Adapter<Doub
 
         //public TextView mTextView;
         public RecyclerView horizontalRecyclerView;
+        public Button titleBtn;
 
         public MyHolder(View itemView) {
             super(itemView);
             //  mTextView = (TextView) itemView;
+            titleBtn = (Button) itemView.findViewById(R.id.double_list_item_title_btn);
             horizontalRecyclerView = (RecyclerView) itemView.findViewById(R.id.recycler_view_horizontal);
         }
     }

@@ -26,7 +26,6 @@ public class DoubleRecyclerViewHorizontalAdapter extends RecyclerView.Adapter<Do
 
     @Override
     public void onBindViewHolder(MyHolder holder, int position) {
-
         holder.mTextView.setText(mData.get(position));
     }
 
