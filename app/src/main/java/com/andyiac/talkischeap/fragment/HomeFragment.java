@@ -97,29 +97,36 @@ public class HomeFragment extends BaseToolBarFragment {
         startActivity(intent);
     }
 
+
+    @OnClick(R.id.id_home_interceptor_html_activity)
     public void onClickAndroidInterceptorHtmlActivity(View view) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), AndroidInterceptorHtmlActivity.class);
         startActivity(intent);
     }
 
+    @OnClick(R.id.id_home_get_package_info)
     public void onClickGetPackageInfo(View view) {
         Toast.makeText(getActivity(), getActivity().getPackageName(), Toast.LENGTH_SHORT).show();
     }
 
+
     // Test over scroll view
+    @OnClick(R.id.id_home_over_scroll)
     public void onClickOverScrollActivity(View view) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), OverScrollActivity.class);
         startActivity(intent);
     }
 
+    @OnClick(R.id.id_home_pop_window)
     public void onClickPopWindow(View view) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), PopWindowTestActivity.class);
         startActivity(intent);
     }
 
+    @OnClick(R.id.id_home_recycler_view)
     public void onClickRecyclerView(View view) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), HorizontalRecyclerViewActivity.class);
@@ -133,12 +140,14 @@ public class HomeFragment extends BaseToolBarFragment {
 //        startActivity(intent);
     }
 
+    @OnClick(R.id.id_home_pull_and_loadmore)
     public void onClickRefreshQiuDaView(View view) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), PullAndLoadMoreQiuTestActivity.class);
         startActivity(intent);
     }
 
+    @OnClick(R.id.id_home_loadmore)
     public void onClickLoadMore(View view) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), ListViewFooterLoadMoreActivity.class);
@@ -147,42 +156,47 @@ public class HomeFragment extends BaseToolBarFragment {
     }
 
 
+    @OnClick(R.id.id_home_batter_manager)
     public void onClickBatteryManager(View view) {
         BatteryManager bm = (BatteryManager) getActivity().getSystemService(Activity.BATTERY_SERVICE);
 //        bm.isCharging();
 //        Toast.makeText(this, bm.isCharging() + "", Toast.LENGTH_SHORT).show();
 //        int status = bm.getIntProperty(Integer.MIN_VALUE);
-
     }
 
+    @OnClick(R.id.id_home_fading_title_bar)
     public void onClickFadingTitleBar(View view) {
         Intent intent = new Intent(getActivity(), FadingTitleBarActivity.class);
         startActivity(intent);
     }
 
+    @OnClick(R.id.id_home_bottom_sheet)
     public void onClickBottomSheet(View view) {
         Intent intent = new Intent(getActivity(), BottomSheetActivity.class);
         startActivity(intent);
-
     }
 
+    @OnClick(R.id.id_home_view_pdf)
     public void onClickViewPdf(View view) {
         Intent intent = new Intent(getActivity(), PDFViewActivity.class);
         startActivity(intent);
     }
 
+    @OnClick(R.id.id_home_test_animation)
     public void onClickTestAnimation(View view) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), ScaleAnimationActivity.class);
         startActivity(intent);
     }
 
+    @OnClick(R.id.id_home_scissors)
     public void onClickScissors(View view) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), ScissorsActivity.class);
         startActivity(intent);
     }
 
+    @OnClick(R.id.id_home_memory_test)
     public void onClickImageMemoryTest(View view) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), ImageBitmapMemoryTestActivity.class);
@@ -190,6 +204,7 @@ public class HomeFragment extends BaseToolBarFragment {
 
     }
 
+    @OnClick(R.id.id_home_soft_input)
     public void onClickLinearLayoutSoftInputTest(View view) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), SoftInputModeTestActivity.class);
@@ -197,12 +212,14 @@ public class HomeFragment extends BaseToolBarFragment {
 
     }
 
+    @OnClick(R.id.id_home_event_bus)
     public void onClickEventBusDemo(View view) {
         Intent intent = new Intent();
         intent.setClass(getActivity(), EventBusDemoActivity.class);
         startActivity(intent);
     }
 
+    @OnClick(R.id.id_home_custom_listview)
     public void onClickXfzMeetingListCustomView(View view) {
 
         Intent intent = new Intent();

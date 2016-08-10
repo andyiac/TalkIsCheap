@@ -30,15 +30,6 @@
                 custom:titleText="fragment stack view" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
-                android:id="@+id/id_home_test2"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
-
-            <com.andyiac.talkischeap.view.custom.TICItemView
                 android:id="@+id/id_home_web_view_js_interface"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
@@ -48,188 +39,160 @@
                 custom:titleText="just for test" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_interceptor_html_activity"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="test interceptor html "
+                custom:titleText="interceptor html " />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_get_package_info"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="get package info "
+                custom:titleText="get package info" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_over_scroll"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="over scroll"
+                custom:titleText="over scroll test " />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_pop_window"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="pop window test "
+                custom:titleText="pop window test " />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_recycler_view"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="recycler view test "
+                custom:titleText="recycler view" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_pull_and_loadmore"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="pull and load more "
+                custom:titleText="pull and load more" />
+
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_loadmore"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="pull and load more "
+                custom:titleText="pull and load more" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_batter_manager"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="battery manager "
+                custom:titleText="battery manager" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_fading_title_bar"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="fading_title_bar"
+                custom:titleText="fading title bar " />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_bottom_sheet"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="bottom sheet "
+                custom:titleText="bottom sheet " />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_view_pdf"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="view pdf "
+                custom:titleText="view pdf" />
+
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_test_animation"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="test animation"
+                custom:titleText="test animation" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_scissors"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="image scissors"
+                custom:titleText="image scissors" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_memory_test"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="memory test "
+                custom:titleText="memory test" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_soft_input"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="soft input "
+                custom:titleText="soft input" />
+
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_event_bus"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="event bus test "
+                custom:titleText="EventBus test" />
 
             <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_custom_listview"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
-
-            <com.andyiac.talkischeap.view.custom.TICItemView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
-
-            <com.andyiac.talkischeap.view.custom.TICItemView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
-
-            <com.andyiac.talkischeap.view.custom.TICItemView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
-
-            <com.andyiac.talkischeap.view.custom.TICItemView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
-
-            <com.andyiac.talkischeap.view.custom.TICItemView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
-
-            <com.andyiac.talkischeap.view.custom.TICItemView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                custom:contentText="this component test hope you like it ,this component test hope you like it this component test hope you like it "
-                custom:titleText="just for test" />
+                custom:contentText="custom list view"
+                custom:titleText="custom list view" />
 
         </GridLayout>
 
