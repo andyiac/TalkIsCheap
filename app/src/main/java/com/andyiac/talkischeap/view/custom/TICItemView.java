@@ -10,13 +10,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.andyiac.talkischeap.R;
+import com.andyiac.talkischeap.utils.Colors;
+
+import java.util.Random;
 
 /**
  * @author andyiac
  * @date 6/26/16
  * @web www.andyiac.com
  */
-public class TICItemView extends LinearLayout {
+public class TICItemView extends LinearLayout implements Colors {
 
 
     private TextView mTvTitle;
@@ -35,6 +38,11 @@ public class TICItemView extends LinearLayout {
 
 
         View view = LayoutInflater.from(context).inflate(R.layout.tic_item_view, this);
+
+        Random random = new Random();
+        int c = random.nextInt(7);
+        view.setBackgroundColor(colors[c]);
+
         mTvTitle = (TextView) view.findViewById(R.id.tic_item_view_title);
         mTvContent = (TextView) view.findViewById(R.id.tic_item_view_content);
 
@@ -49,6 +57,8 @@ public class TICItemView extends LinearLayout {
         if (!TextUtils.isEmpty(content)) {
             setContent(content);
         }
+
+        a.recycle();
 
     }
 

@@ -15,6 +15,14 @@ import com.andyiac.talkischeap.R;
  */
 public class DoubleListViewFragment extends BaseToolBarFragment {
 
+
+    @Override
+    protected void initToolBarView() {
+        setToolbarDisplayHomeAsUp(true);
+        String title = getClass().getSimpleName() + " " + mInt;
+        setToolbarTitle(title);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -23,10 +31,4 @@ public class DoubleListViewFragment extends BaseToolBarFragment {
         return view;
     }
 
-    @Override
-    protected void initToolBarView() {
-        setToolbarDisplayHomeAsUp(true);
-        String title = getClass().getSimpleName() + " " + mInt;
-        setToolbarTitle(title);
-    }
 }
