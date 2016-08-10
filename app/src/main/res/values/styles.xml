@@ -19,8 +19,9 @@
 
     <style name="tic_item_style">
 
-        <item name="android:layout_height">110dp</item>
-        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">140dp</item>
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_margin">2dp</item>
 
 
     </style>

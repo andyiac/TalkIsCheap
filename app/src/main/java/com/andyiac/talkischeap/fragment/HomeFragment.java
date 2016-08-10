@@ -54,7 +54,6 @@ public class HomeFragment extends BaseToolBarFragment {
 
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.home_fragment, container, false);
         unbinder = ButterKnife.bind(this, view);
-
         initView(view);
         return view;
     }
