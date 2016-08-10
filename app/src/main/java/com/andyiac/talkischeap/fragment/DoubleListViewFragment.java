@@ -60,7 +60,7 @@ public class DoubleListViewFragment extends BaseToolBarFragment {
             data[i] = "item " + i;
         }
 
-        DoubleRecyclerViewVerticalAdapter verticalAdapter = new DoubleRecyclerViewVerticalAdapter(Arrays.asList(data));
+        DoubleRecyclerViewVerticalAdapter verticalAdapter = new DoubleRecyclerViewVerticalAdapter(getActivity(), Arrays.asList(data));
         mRecyclerViewVertical.setAdapter(verticalAdapter);
 
     }

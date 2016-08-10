@@ -8,6 +8,7 @@
 - todo Me Fragment 中 Version 版本读取
 - todo Me Fragment 中 Weibo 支持, 可以提一个PR
 
+- todo 整理自己的 BaseAdapter
 
 
 ## 一些技术点
