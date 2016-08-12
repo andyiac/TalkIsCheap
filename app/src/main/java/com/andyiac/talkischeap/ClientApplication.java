@@ -13,6 +13,8 @@ import com.orhanobut.logger.Logger;
  */
 public class ClientApplication extends Application {
 
+    public static final boolean DEBUG = true;
+
     private static final String TAG = "TALK_IS_CHEAP";
 
     @Override

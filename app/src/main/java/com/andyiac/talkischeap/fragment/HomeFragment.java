@@ -256,7 +256,7 @@ public class HomeFragment extends BaseToolBarFragment {
     public void testItemAutoScrollList() {
         if (mFragmentNavigation != null) {
 
-            mFragmentNavigation.pushFragment(new HorizontalRecyclerViewFragment());
+            mFragmentNavigation.pushFragment(new AutoScrollHorizontalRecyclerViewFragment());
         }
     }
 
