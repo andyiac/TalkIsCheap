@@ -251,4 +251,13 @@ public class HomeFragment extends BaseToolBarFragment {
 
     }
 
+
+    @OnClick(R.id.id_home_item_auto_attach_top_list)
+    public void testItemAutoScrollList() {
+        if (mFragmentNavigation != null) {
+
+            mFragmentNavigation.pushFragment(new HorizontalRecyclerViewFragment());
+        }
+    }
+
 }

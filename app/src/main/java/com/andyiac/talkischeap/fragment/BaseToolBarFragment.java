@@ -25,9 +25,19 @@ public abstract class BaseToolBarFragment extends BaseFragment {
     }
 
     private void initView(View view) {
+
+        // for default config
+        setToolbarDisplayHomeAsUp(true);
+
         initToolBarView();
     }
 
+    // you can set up fragment tool bar name here
+    // use  setToolbarTitle(getClass().getSimpleName());
+
+    // for default config
+    // or set
+    // setToolbarDisplayHomeAsUp(true);
     protected abstract void initToolBarView();
 
 
