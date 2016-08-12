@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.andyiac.talkischeap.R;
-import com.andyiac.talkischeap.adapter.HorizontalRecyclerViewAdapter;
+import com.andyiac.talkischeap.adapter.AutoScrollHorizontalRecyclerViewAdapter;
 
 import java.util.Arrays;
 
@@ -30,7 +30,7 @@ public class HorizontalRecyclerViewFragment extends BaseToolBarFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
 
-        View view = LayoutInflater.from(getActivity()).inflate(R.layout.horizontal_recyler_view, container, false);
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.auto_scroll_item_horizontal_recyler_view, container, false);
         initHorizontal(view);
         return view;
     }
@@ -50,8 +50,9 @@ public class HorizontalRecyclerViewFragment extends BaseToolBarFragment {
         for (int i = 0; i < dataset.length; i++) {
             dataset[i] = "item" + i;
         }
+
         // 创建Adapter，并指定数据集
-        HorizontalRecyclerViewAdapter adapter = new HorizontalRecyclerViewAdapter(Arrays.asList(dataset));
+        AutoScrollHorizontalRecyclerViewAdapter adapter = new AutoScrollHorizontalRecyclerViewAdapter(Arrays.asList(dataset));
         // 设置Adapter
         recyclerView.setAdapter(adapter);
     }
