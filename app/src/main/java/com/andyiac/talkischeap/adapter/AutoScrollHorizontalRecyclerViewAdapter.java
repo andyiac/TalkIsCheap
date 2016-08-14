@@ -84,6 +84,7 @@ public class AutoScrollHorizontalRecyclerViewAdapter extends RecyclerView.Adapte
     }
 
 
+
     @Override
     public int getItemCount() {
         return mData.size();
