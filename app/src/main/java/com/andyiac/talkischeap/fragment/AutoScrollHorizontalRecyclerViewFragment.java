@@ -54,7 +54,7 @@ public class AutoScrollHorizontalRecyclerViewFragment extends BaseToolBarFragmen
         recyclerView.setLayoutManager(layoutManager);
 
         // 创建数据集
-        dataset = new String[8];
+        dataset = new String[6];
         for (int i = 0; i < dataset.length; i++) {
             dataset[i] = "item" + i;
         }
@@ -76,34 +76,42 @@ public class AutoScrollHorizontalRecyclerViewFragment extends BaseToolBarFragmen
              */
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-
+                //super.onScrollStateChanged(recyclerView, newState);
                 if (D) Log.i("onScrollStateChanged", "-------");
-                scrollChange(recyclerView, newState, mSumDx, 0);
 
-                super.onScrollStateChanged(recyclerView, newState);
+                scrollChange(recyclerView, newState, mSumDx, 0);
             }
 
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                //super.onScrolled(recyclerView, dx, dy);
+                if (D) Log.i("onScrolled", "-------"+dx + "");
                 mSumDx += dx;
-                if (D) Log.e("onScrolled", dx + "");
-                super.onScrolled(recyclerView, dx, dy);
+
             }
         });
 
         //layoutManager.scrollToPosition(2);
 
-        int density = (int) ScreenUtils.getScreenDensity(getActivity());
         screenWidth = ScreenUtils.getScreenWith(getActivity());
-        if (D) Logger.e("density" + density + "screen width ==>" + screenWidth);
 
     }
 
 
     int mSumDx;
-    int listItemWidth = 300;
+
 
     private void scrollChange(RecyclerView recyclerView, int newState, int dx, int dy) {
+
+        int density = (int) ScreenUtils.getScreenDensity(getActivity());
+
+        if (D) Logger.e("====density====>>" + density + "====screen width ==>" + screenWidth);
+
+        //  item's width
+        int listItemWidth = recyclerView.getChildAt(0).getWidth();
+        //100 * density;
+
+        if (D) Log.e("TAG", "====list item width ==》》" + listItemWidth);
 
         if (D) Log.e("TAG", "=== scroll change====" + newState);
 
@@ -111,6 +119,30 @@ public class AutoScrollHorizontalRecyclerViewFragment extends BaseToolBarFragmen
             case RecyclerView.SCROLL_STATE_IDLE:
 
                 if (D) Log.e("TAG", "=== dx=>>" + dx);
+                if (D) Log.e("TAG", "=== mSumDx=>>" + mSumDx);
+
+
+                // 如果滑到最后一项完全出来 不处理
+                // 滑动的长度 == list 总长度 - 屏幕宽度/itemWidth
+
+                int screenHoldsItemsCount = (screenWidth % listItemWidth == 0) ? screenWidth / listItemWidth : screenWidth / listItemWidth + 1;
+
+
+                if (D) Log.e("TAG", "=== screenHoldsItemCount=>>" + screenHoldsItemsCount);
+
+                int tem = listItemWidth * dataset.length - listItemWidth * screenHoldsItemsCount;
+
+                if (D) Log.e("TAG", "====all =>>>" + tem);
+                if (D) Log.e("TAG", "=== mSumDx=>>" + mSumDx);
+
+                if (mSumDx == listItemWidth * dataset.length - listItemWidth * screenHoldsItemsCount) {
+                    if (D) Log.e("TAG", "--equal-- and return--");
+                    return;
+                }
+
+
+                if (D) Log.e("TAG", "-------not equal then can come here-------");
+
 
                 if (dx > 0) { // 向前滑动
 
@@ -120,19 +152,16 @@ public class AutoScrollHorizontalRecyclerViewFragment extends BaseToolBarFragmen
 
                     // 滑动大于 一半 把剩下的帮用户滑完
                     if (remain >= listItemWidth / 2) {
+
+                        if (D) Log.e("TAG", "----帮用户滑完----");
                         recyclerView.smoothScrollBy(listItemWidth - remain, 0);
+
                     } else {
 
-                        // 如果滑到最后一项完全出来 不处理
-
-                        if (mSumDx == listItemWidth * dataset.length - screenWidth) {
-
-                            return;
-                        }
+                        if (D) Log.e("TAG", "----滑动回去--");
 
                         // 滑动小于一半 划回去
                         recyclerView.smoothScrollBy(-remain, 0);
-
                     }
 
                 } else if (dx < 0) { // 向后滑动

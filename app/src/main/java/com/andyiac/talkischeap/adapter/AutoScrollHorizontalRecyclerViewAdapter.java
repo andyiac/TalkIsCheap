@@ -19,7 +19,7 @@ import java.util.List;
 public class AutoScrollHorizontalRecyclerViewAdapter extends RecyclerView.Adapter<AutoScrollHorizontalRecyclerViewAdapter.MyHolder> {
 
 
-    private boolean D = false ;//ClientApplication.DEBUG;
+    private boolean D = ClientApplication.DEBUG;
     private List<String> mData;
     private RecyclerView mRecyclerView;
 
@@ -59,10 +59,10 @@ public class AutoScrollHorizontalRecyclerViewAdapter extends RecyclerView.Adapte
      * related data item inside this method and should not keep a copy of it.
      *
      * If you need the position of an item later  on (e.g. in a click listener),
-     * use {@link ViewHolder#getAdapterPosition()} which will  have the updated adapter position.
+     * use { link ViewHolder#getAdapterPosition()} which will  have the updated adapter position.
      * <p/>
      *
-     * Override {@link #onBindViewHolder(ViewHolder, int, List)} instead if Adapter can
+     * Override {link #onBindViewHolder(ViewHolder, int, List)} instead if Adapter can
      * handle effcient partial bind.
      *
      * @param holder   The ViewHolder which should be updated to represent the contents of the
