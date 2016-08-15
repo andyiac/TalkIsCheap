@@ -1,4 +1,4 @@
-package com.andyiac.talkischeap.fragment;
+package com.andyiac.talkischeap.fragment.recyclerview_demos;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,17 +12,15 @@ import android.view.ViewGroup;
 import com.andyiac.talkischeap.ClientApplication;
 import com.andyiac.talkischeap.R;
 import com.andyiac.talkischeap.adapter.AutoScrollHorizontalRecyclerViewAdapter;
+import com.andyiac.talkischeap.fragment.BaseToolBarFragment;
 import com.andyiac.talkischeap.utils.ScreenUtils;
 import com.orhanobut.logger.Logger;
 
 import java.util.Arrays;
 
-/**
- * @author andyiac
- * @date 1/29/16
- * @web www.andyiac.com
- */
-public class AutoScrollHorizontalRecyclerViewFragment extends BaseToolBarFragment {
+
+// TODO: 16/8/15  这个东西 写出来没有一点儿扩展性 ！！！
+public class AutoScrollHorizontalRecyclerViewWithLoadMoreFragment extends BaseToolBarFragment {
 
     private boolean D = ClientApplication.DEBUG;
     private String[] dataset;
@@ -47,103 +45,92 @@ public class AutoScrollHorizontalRecyclerViewFragment extends BaseToolBarFragmen
     private void initHorizontal(View view) {
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rv_horizontal);
 
-        // 创建一个线性布局管理器
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        // 设置布局管理器
         recyclerView.setLayoutManager(layoutManager);
 
-        // 创建数据集
         dataset = new String[9];
         for (int i = 0; i < dataset.length; i++) {
             dataset[i] = "item" + i;
         }
 
-        // 创建Adapter，并指定数据集
         AutoScrollHorizontalRecyclerViewAdapter adapter = new AutoScrollHorizontalRecyclerViewAdapter(Arrays.asList(dataset), recyclerView);
-        // 设置Adapter
         recyclerView.setAdapter(adapter);
-
 
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
 
             //  OnScrollListener 中先调用 onScrolled 再调用 onScrollStateChanged()
-            // todo 去源码验证一下
-
-            /**
-             * Callback method to be invoked when RecyclerView's scroll state changes.
-             *
-             * @param recyclerView The RecyclerView whose scroll state has changed.
-             * @param newState     The updated scroll state. One of {link #SCROLL_STATE_IDLE},
-             *                     { link #SCROLL_STATE_DRAGGING} or {link #SCROLL_STATE_SETTLING}.
-             */
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                //super.onScrollStateChanged(recyclerView, newState);
-                if (D) Log.i("onScrollStateChanged", "-------");
-
-                scrollChange(recyclerView, newState);
+                scrollChange(recyclerView, newState, mSumDx, 0);
             }
 
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                //super.onScrolled(recyclerView, dx, dy);
-                if (D) Log.i("onScrolled", "------->" + dx + "");
                 mSumDx += dx;
-
             }
         });
 
-
-        //layoutManager.scrollToPosition(2);
-
         screenWidth = ScreenUtils.getScreenWith(getActivity());
-
     }
 
 
     int mSumDx;
 
-
-    private void scrollChange(RecyclerView recyclerView, int newState) {
-
-        if (D) Log.e("TAG", "=== scroll change====" + newState);
+    private void scrollChange(RecyclerView recyclerView, int newState, int dx, int dy) {
 
         int density = (int) ScreenUtils.getScreenDensity(getActivity());
 
         if (D) Logger.e("====density====>>" + density + "====screen width ==>" + screenWidth);
 
-        // TODO: 16/8/14 item with 在 Adapter 中拿不到 在 OnBindView holder 中拿到的 itemView 的宽度是 0 原因是 View 。。。。？
         int listItemWidth = recyclerView.getChildAt(0).getWidth();// 可以通过 Recycler 动态拿到宽度
-
-        if (D) Log.e("TAG", "====list item width == >>" + listItemWidth);
 
         switch (newState) {
             case RecyclerView.SCROLL_STATE_IDLE:
 
-                // 滑动的长度 == list 总长度 - 屏幕宽度
-
-                // listView 实际总长度 不可见部分
                 int invisibleWidth = listItemWidth * dataset.length - screenWidth;
 
-                if (D) Log.e("TAG", "====invisibleWidth=>>>" + invisibleWidth);
-                if (D) Log.e("TAG", "=== mSumDx=>>" + mSumDx);
-
                 if (mSumDx == invisibleWidth) {
-                    // 如果滑到最后一项完全出来 不处理
+
+                    if (D) Log.e("TAG", "----滑动完成,最后一项滑出--");
 
                 } else {
 
-                    int remain = mSumDx % listItemWidth;
+                    if (D) Log.e("TAG", "-------not equal then can come here-------");
 
-                    if (remain >= listItemWidth / 2) {
+                    if (dx > 0) { // 向前滑动
+
+                        int remain = mSumDx % listItemWidth;
+
                         // 滑动大于 一半 把剩下的帮用户滑完
-                        recyclerView.smoothScrollBy(listItemWidth - remain, 0);
-                    } else {
-                        // 滑动小于一半 划回去
-                        recyclerView.smoothScrollBy(-remain, 0);
+                        if (remain >= listItemWidth / 2) {
+
+                            if (D) Log.e("TAG", "帮用户滑完");
+
+                            recyclerView.smoothScrollBy(listItemWidth - remain, 0);
+
+                        } else {
+
+                            if (D) Log.e("TAG", "滑动回去");
+
+                            // 滑动小于一半 划回去
+                            recyclerView.smoothScrollBy(-remain, 0);
+                        }
+
+                    } else if (dx < 0) { // 向后滑动
+                        if (D) Log.i("TAG", "dx <0");
                     }
+
                 }
+
+
+                break;
+
+            case RecyclerView.SCROLL_STATE_DRAGGING:
+
+                break;
+
+            case RecyclerView.SCROLL_STATE_SETTLING:
 
                 break;
         }
