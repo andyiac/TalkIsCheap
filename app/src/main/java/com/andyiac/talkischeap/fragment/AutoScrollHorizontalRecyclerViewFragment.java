@@ -107,7 +107,8 @@ public class AutoScrollHorizontalRecyclerViewFragment extends BaseToolBarFragmen
 
     private void scrollChange(RecyclerView recyclerView, int newState) {
 
-        if (D) Log.e("TAG", "=== scroll change====" + newState);
+        if (D) Log.e("TAG", "=== scroll change====" + newState + "=== mSumDx=>>" + mSumDx);
+
 
         int density = (int) ScreenUtils.getScreenDensity(getActivity());
 
@@ -119,15 +120,13 @@ public class AutoScrollHorizontalRecyclerViewFragment extends BaseToolBarFragmen
         if (D) Log.e("TAG", "====list item width == >>" + listItemWidth);
 
         switch (newState) {
+
             case RecyclerView.SCROLL_STATE_IDLE:
 
                 // 滑动的长度 == list 总长度 - 屏幕宽度
-
-                // listView 实际总长度 不可见部分
                 int invisibleWidth = listItemWidth * dataset.length - screenWidth;
 
                 if (D) Log.e("TAG", "====invisibleWidth=>>>" + invisibleWidth);
-                if (D) Log.e("TAG", "=== mSumDx=>>" + mSumDx);
 
                 if (mSumDx == invisibleWidth) {
                     // 如果滑到最后一项完全出来 不处理
