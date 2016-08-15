@@ -147,8 +147,14 @@
             <com.andyiac.talkischeap.view.custom.TICItemView
                 android:id="@+id/id_home_item_auto_attach_top_list"
                 style="@style/tic_item_style"
-                custom:contentText="item auto scroll to top"
+                custom:contentText="item auto scroll 1"
                 custom:titleText="listview item auto scroll to top" />
+
+            <com.andyiac.talkischeap.view.custom.TICItemView
+                android:id="@+id/id_home_item_auto_attach_top_list2"
+                style="@style/tic_item_style"
+                custom:contentText="item auto scroll 2"
+                custom:titleText="listview item auto scroll 2" />
         </GridLayout>
 
     </LinearLayout>

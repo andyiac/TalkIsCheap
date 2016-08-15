@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import com.andyiac.talkischeap.R;
 import com.andyiac.talkischeap.adapter.AutoScrollHorizontalRecyclerViewAdapter;
 import com.andyiac.talkischeap.fragment.BaseToolBarFragment;
 import com.andyiac.talkischeap.utils.ScreenUtils;
-import com.orhanobut.logger.Logger;
 
 import java.util.Arrays;
 
@@ -62,7 +60,7 @@ public class AutoScrollHorizontalRecyclerViewWithLoadMoreFragment extends BaseTo
             //  OnScrollListener 中先调用 onScrolled 再调用 onScrollStateChanged()
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                scrollChange(recyclerView, newState, mSumDx, 0);
+                scrollChange(recyclerView, newState);
             }
 
             @Override
@@ -71,17 +69,12 @@ public class AutoScrollHorizontalRecyclerViewWithLoadMoreFragment extends BaseTo
             }
         });
 
-        screenWidth = ScreenUtils.getScreenWith(getActivity());
+        screenWidth = ScreenUtils.getScreenWidth(getActivity());
     }
 
+    int mSumDx; // X 轴上滑动的长度
 
-    int mSumDx;
-
-    private void scrollChange(RecyclerView recyclerView, int newState, int dx, int dy) {
-
-        int density = (int) ScreenUtils.getScreenDensity(getActivity());
-
-        if (D) Logger.e("====density====>>" + density + "====screen width ==>" + screenWidth);
+    private void scrollChange(RecyclerView recyclerView, int newState) {
 
         int listItemWidth = recyclerView.getChildAt(0).getWidth();// 可以通过 Recycler 动态拿到宽度
 
@@ -92,37 +85,20 @@ public class AutoScrollHorizontalRecyclerViewWithLoadMoreFragment extends BaseTo
 
                 if (mSumDx == invisibleWidth) {
 
-                    if (D) Log.e("TAG", "----滑动完成,最后一项滑出--");
-
                 } else {
 
-                    if (D) Log.e("TAG", "-------not equal then can come here-------");
+                    int remain = mSumDx % listItemWidth;
 
-                    if (dx > 0) { // 向前滑动
+                    // 滑动大于 一半 把剩下的帮用户滑完
+                    if (remain >= listItemWidth / 2) {
 
-                        int remain = mSumDx % listItemWidth;
-
-                        // 滑动大于 一半 把剩下的帮用户滑完
-                        if (remain >= listItemWidth / 2) {
-
-                            if (D) Log.e("TAG", "帮用户滑完");
-
-                            recyclerView.smoothScrollBy(listItemWidth - remain, 0);
-
-                        } else {
-
-                            if (D) Log.e("TAG", "滑动回去");
-
-                            // 滑动小于一半 划回去
-                            recyclerView.smoothScrollBy(-remain, 0);
-                        }
-
-                    } else if (dx < 0) { // 向后滑动
-                        if (D) Log.i("TAG", "dx <0");
+                        // 帮用户滑完
+                        recyclerView.smoothScrollBy(listItemWidth - remain, 0);
+                    } else {
+                        // 滑动小于一半 划回去
+                        recyclerView.smoothScrollBy(-remain, 0);
                     }
-
                 }
-
 
                 break;
 

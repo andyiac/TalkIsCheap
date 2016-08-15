@@ -25,6 +25,7 @@ import com.andyiac.talkischeap.activity.ScaleAnimationActivity;
 import com.andyiac.talkischeap.activity.SoftInputModeTestActivity;
 import com.andyiac.talkischeap.activity.XfzMeetingListCustomViewActivity;
 import com.andyiac.talkischeap.activity.image.cropper.ScissorsActivity;
+import com.andyiac.talkischeap.fragment.recyclerview_demos.AutoScrollHorizontalRecyclerViewWithLoadMoreFragment;
 import com.andyiac.talkischeap.interact_js.WebViewJsInteractActivity;
 import com.andyiac.talkischeap.interceptor_html.AndroidInterceptorHtmlActivity;
 
@@ -257,6 +258,14 @@ public class HomeFragment extends BaseToolBarFragment {
         if (mFragmentNavigation != null) {
 
             mFragmentNavigation.pushFragment(new AutoScrollHorizontalRecyclerViewFragment());
+        }
+    }
+
+    @OnClick(R.id.id_home_item_auto_attach_top_list2)
+    public void testItemAutoScrollList2() {
+        if (mFragmentNavigation != null) {
+
+            mFragmentNavigation.pushFragment(new AutoScrollHorizontalRecyclerViewWithLoadMoreFragment());
         }
     }
 

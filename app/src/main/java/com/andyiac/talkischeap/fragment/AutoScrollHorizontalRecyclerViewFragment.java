@@ -97,7 +97,7 @@ public class AutoScrollHorizontalRecyclerViewFragment extends BaseToolBarFragmen
 
         //layoutManager.scrollToPosition(2);
 
-        screenWidth = ScreenUtils.getScreenWith(getActivity());
+        screenWidth = ScreenUtils.getScreenWidth(getActivity());
 
     }
 
