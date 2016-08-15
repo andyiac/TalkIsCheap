@@ -4,11 +4,10 @@
     android:layout_height="wrap_content"
     android:background="@android:color/darker_gray"
     android:gravity="center"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <ImageView
-        android:layout_width="80dp"
+        android:layout_width="100dp"
         android:layout_margin="10dp"
         android:layout_height="120dp"
         android:background="@color/about_github_color" />
