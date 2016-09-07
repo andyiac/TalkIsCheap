@@ -1,6 +1,7 @@
 package com.andyiac.talkischeap.adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -42,6 +43,8 @@ public class AutoScrollHorizontalRecyclerViewAdapter extends RecyclerView.Adapte
     public void onBindViewHolder(MyHolder holder, int position) {
 
         holder.mTextView.setText(mData.get(position));
+        int height = holder.mTextView.getMeasuredHeight();
+        if(D) Log.e("TAG","height====>>"+ height);
 
     }
 
